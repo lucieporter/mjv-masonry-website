@@ -12,8 +12,18 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-document.querySelectorAll(".site-nav a").forEach(function (link) {
-  link.addEventListener("click", function () {
+const pageLinks = document.querySelectorAll("a[href^='#']");
+pageLinks.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    const targetId = link.getAttribute("href");
+    if (targetId && targetId !== "#") {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        event.preventDefault();
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
     if (siteNav) {
       siteNav.classList.remove("active");
     }
