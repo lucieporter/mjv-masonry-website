@@ -1,12 +1,16 @@
 :root {
-  --navy: #003361;
-  --teal: #00B8DF;
-  --gray: #6d7278;
-  --red: #a22222;
-  --cream: #f5eed1;
+  --navy: #3b5a40; /* deep forest green */
+  --navy-dark: #2e4734; /* darker forest */
+  --teal: #8aa399; /* soft sage */
+  --gray: #7a6b5a; /* warm taupe */
+  --red: #8b3a2f; /* brick */
+  --cream: #efe6d6; /* sand */
+  --cream-dark: #e6dcc6;
   --white: #ffffff;
-  --dark: #1f2933;
-  --light-gray: #f6f6f6;
+  --dark: #2b2b27; /* charcoal warm */
+  --light-gray: #f5f2ec; /* off-white warm */
+  --muted-border: #e7e1d6;
+  --muted-border-2: #d9cfc0;
   --max-width: 1140px;
 }
 
@@ -101,7 +105,7 @@ a {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--navy), #0b4a78);
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
   color: var(--white);
   padding: 5rem 0 4rem;
 }
@@ -128,6 +132,19 @@ a {
   max-width: 680px;
 }
 
+.hero-experience {
+  margin-top: 0.4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--cream);
+}
+
+.hero-service-area {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.92);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -136,8 +153,9 @@ a {
 }
 
 .hero-panel {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(239, 230, 214, 0.96); /* warm cream to improve contrast */
+  color: var(--dark);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 24px;
   padding: 1.5rem;
   display: grid;
@@ -158,8 +176,8 @@ a {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.18);
-  color: var(--white);
+  background: var(--cream);
+  color: var(--dark);
   font-weight: 700;
 }
 
@@ -200,7 +218,7 @@ a {
 .card,
 .portfolio-card {
   background: var(--white);
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--muted-border);
   border-radius: 18px;
   padding: 1.8rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
@@ -224,7 +242,7 @@ a {
 }
 
 .portfolio-card-image {
-  background: linear-gradient(180deg, #f1f1f1 0%, #e5e5e5 100%);
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
   border-radius: 16px;
   min-height: 180px;
   display: grid;
@@ -262,7 +280,7 @@ a {
 }
 
 details {
-  border: 1px solid #ddd;
+  border: 1px solid var(--muted-border-2);
   border-radius: 16px;
   padding: 1rem 1rem 0.8rem;
   background: var(--white);
@@ -306,7 +324,7 @@ summary::-webkit-details-marker {
   display: grid;
   gap: 1rem;
   background: var(--white);
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--muted-border);
   border-radius: 18px;
   padding: 1.5rem;
 }
@@ -322,12 +340,12 @@ summary::-webkit-details-marker {
 .contact-form textarea {
   width: 100%;
   padding: 0.9rem 1rem;
-  border: 1px solid #d6d6d6;
+  border: 1px solid var(--muted-border-2);
   border-radius: 12px;
   font-family: inherit;
   font-size: 1rem;
   color: var(--dark);
-  background: #fafafa;
+  background: var(--light-gray);
 }
 
 .contact-form textarea {
