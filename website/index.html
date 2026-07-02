@@ -27,50 +27,71 @@
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#areas">Service Areas</a>
-        <a href="#quote">Request Quote</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <a href="#quote" class="btn btn-header-quote">Request a Quote</a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="home">
+      <div class="hero-background"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Masonry • Craftsmanship • Contracting</p>
-          <h1>Built to Last. Built Right.</h1>
+          <h1>Ontario's Trusted Masonry Expert</h1>
           <p class="hero-subtitle">MJV Masonry & Contracting brings skilled craftsmanship and dependable work to every project — from the first stone to the final finish.</p>
-          <p class="hero-experience">~50 years in the trade, ~30 years operating the business.</p>
+          <div class="hero-experience-badge">
+            <p>~50 years in the trade • ~30 years operating the business</p>
+          </div>
           <p class="hero-service-area">Service area: Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, Mississauga</p>
           <div class="hero-actions">
             <a href="#quote" class="btn btn-primary">Request a Free Quote</a>
-            <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
+            <a href="#portfolio" class="btn btn-secondary">View Our Projects</a>
           </div>
         </div>
 
-        <aside class="hero-panel">
-          <div class="panel-item">
-            <span class="panel-number">01</span>
-            <div>
-              <h3>Trusted masonry</h3>
-              <p>Skilled brick, stone, and concrete work delivered with care.</p>
-            </div>
-          </div>
-          <div class="panel-item">
-            <span class="panel-number">02</span>
-            <div>
-              <h3>Local service</h3>
-              <p>Serving nearby towns with prompt, reliable project support.</p>
-            </div>
-          </div>
-          <div class="panel-item">
-            <span class="panel-number">03</span>
-            <div>
-              <h3>Project support</h3>
-              <p>Clear estimates, dependable scheduling, and open communication.</p>
-            </div>
-          </div>
+        <aside class="hero-form-card">
+          <h3>Get Your Free Quote</h3>
+          <form class="hero-quote-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="(123) 456-7890" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Project Location
+              <input type="text" name="location" placeholder="Your project address" required />
+            </label>
+            <label>
+              Service Type
+              <select name="service" required>
+                <option value="">Select a service</option>
+                <option value="brick-repair">Brick Repair & Replacement</option>
+                <option value="stonework">Stonework</option>
+                <option value="chimney">Chimney Repair & Rebuild</option>
+                <option value="restoration">Masonry Restoration</option>
+                <option value="foundation">Foundation Repair</option>
+                <option value="walkways">Walkways & Retaining Walls</option>
+                <option value="custom">Custom Masonry</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label>
+              Project Description
+              <textarea name="description" placeholder="Tell us about your project..." rows="3"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Get Free Quote</button>
+          </form>
         </aside>
       </div>
     </section>
