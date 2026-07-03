@@ -1,351 +1,1378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>MJV Masonry & Contracting | Marty Vandenberg</title>
-  <meta name="description" content="MJV Masonry & Contracting — Marty Vandenberg provides professional masonry services for local homeowners and businesses." />
-
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJV Masonry and Contracting | Marty Vandenberg</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for structural and masonry icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Lora for timeless heritage headers, Inter for reliable body copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        stonebeige: {
+                            50: '#fbfaf7',
+                            100: '#f5f0e6',
+                            200: '#eaddc7',
+                            300: '#d7c4a3',
+                            800: '#5c4d37',
+                            900: '#3d3223',
+                        },
+                        brickred: {
+                            50: '#fef2f2',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
+                            accent: '#a73a24', // Traditional earthy clay brick red
+                        },
+                        charcoal: {
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom smooth scroll behaviour */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+<body class="bg-stonebeige-50 text-charcoal-900 font-sans antialiased">
 
-<body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <div class="logo">
-        <span>MJV</span>
-        <small>Masonry & Contracting</small>
-      </div>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
-        ☰
-      </button>
-
-      <nav class="site-nav" id="siteNav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#areas">Service Areas</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a href="#quote" class="btn btn-header-quote">Request a Quote</a>
+<!-- Top Announcement Bar / Pending Badge -->
+<div class="bg-charcoal-900 text-stonebeige-100 py-2.5 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-phone text-brickred-accent"></i>
+                <a href="tel:2896821800" class="font-semibold hover:underline">289-682-1800</a>
+            </span>
+            <span class="hidden md:inline-flex items-center gap-1.5">
+                <i class="fa-solid fa-envelope text-brickred-accent"></i>
+                <a href="mailto:mjvm60@gmail.com" class="hover:underline">mjvm60@gmail.com</a>
+            </span>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="bg-brickred-accent text-[10px] text-white font-bold px-2 py-0.5 rounded tracking-wide uppercase">
+                Prototype View
+            </span>
+            <span class="text-stonebeige-300">Some components marked with [PENDING MARTY CONFIRMATION]</span>
+        </div>
     </div>
-  </header>
+</div>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-background"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Masonry • Craftsmanship • Contracting</p>
-          <h1>Ontario's Trusted Masonry Expert</h1>
-          <p class="hero-subtitle">MJV Masonry & Contracting brings skilled craftsmanship and dependable work to every project — from the first stone to the final finish.</p>
-          <div class="hero-experience-badge">
-            <p>~50 years in the trade • ~30 years operating the business</p>
-          </div>
-          <p class="hero-service-area">Service area: Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, Mississauga</p>
-          <div class="hero-actions">
-            <a href="#quote" class="btn btn-primary">Request a Free Quote</a>
-            <a href="#portfolio" class="btn btn-secondary">View Our Projects</a>
-          </div>
+<!-- Header / Main Navigation -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stonebeige-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Simple Text Logo (No logo yet) -->
+            <a href="#" class="flex flex-col group">
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-charcoal-900 group-hover:text-brickred-accent transition-colors">
+                    MJV Masonry and Contracting
+                </span>
+                <span class="text-[10px] sm:text-xs font-semibold tracking-widest text-stonebeige-800 uppercase">
+                    Marty Vandenberg · Custom Craftsmanship
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-stonebeige-900">
+                <a href="#services" class="hover:text-brickred-accent transition-colors">Services</a>
+                <a href="#craftsmanship" class="hover:text-brickred-accent transition-colors">Why MJV</a>
+                <a href="#portfolio" class="hover:text-brickred-accent transition-colors">Portfolio</a>
+                <a href="#service-areas" class="hover:text-brickred-accent transition-colors">Service Areas</a>
+                <a href="#urgency" class="hover:text-brickred-accent transition-colors text-red-700 font-bold">Urgent Repairs</a>
+                <a href="#about" class="hover:text-brickred-accent transition-colors">About</a>
+                <a href="#faq" class="hover:text-brickred-accent transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Call to Actions -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#quote-section" class="bg-brickred-accent hover:bg-brickred-900 text-white font-medium text-xs sm:text-sm px-5 py-2.5 rounded shadow transition-all duration-150">
+                    Request a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-charcoal-900 p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
+    </div>
 
-        <aside class="hero-form-card">
-          <h3>Get Your Free Quote</h3>
-          <form class="hero-quote-form">
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
-            <label>
-              Phone
-              <input type="tel" name="phone" placeholder="(123) 456-7890" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              Project Location
-              <input type="text" name="location" placeholder="Your project address" required />
-            </label>
-            <label>
-              Service Type
-              <select name="service" required>
-                <option value="">Select a service</option>
-                <option value="brick-repair">Brick Repair & Replacement</option>
-                <option value="stonework">Stonework</option>
-                <option value="chimney">Chimney Repair & Rebuild</option>
-                <option value="restoration">Masonry Restoration</option>
-                <option value="foundation">Foundation Repair</option>
-                <option value="walkways">Walkways & Retaining Walls</option>
-                <option value="custom">Custom Masonry</option>
-                <option value="other">Other</option>
-              </select>
-            </label>
-            <label>
-              Project Description
-              <textarea name="description" placeholder="Tell us about your project..." rows="3"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary">Get Free Quote</button>
-          </form>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What We Do</p>
-          <h2>Masonry Work Done the Right Way</h2>
-          <p>At MJV Masonry & Contracting, we take pride in doing the job properly — no shortcuts, no guesswork. Whether you need new construction, repairs, or restoration, we bring the same level of care and skill to every project.</p>
-          <p><strong>Business type:</strong> Residential, Commercial, Restoration, Heritage Restoration, Custom Masonry, Repairs</p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card card-highlight">
-            <h3>Masonry Service 1</h3>
-            <p>Brick Repair, Brick Replacement, Brick Repointing</p>
-          </article>
-          <article class="card">
-            <h3>Masonry Service 2</h3>
-            <p>Stonework, Natural Stonework, Manufactured Stone</p>
-          </article>
-          <article class="card">
-            <h3>Masonry Service 3</h3>
-            <p>Chimney Repair, Chimney Rebuild</p>
-          </article>
-          <article class="card">
-            <h3>Masonry Service 4</h3>
-            <p>Masonry Restoration, Heritage Restoration, Parging</p>
-          </article>
-          <article class="card">
-            <h3>Masonry Service 5</h3>
-            <p>Foundation Repair, Concrete Block Work</p>
-          </article>
-          <article class="card">
-            <h3>Masonry Service 6</h3>
-            <p>Steps, Porches, Walkways, Retaining Walls</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="portfolio">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Our Work</p>
-          <h2>Projects We're Proud Of</h2>
-          <p>Good masonry speaks for itself. Browse a selection of completed projects from MJV Masonry & Contracting — each one a reflection of the quality and attention to detail we bring to every job.</p>
-          <p>From retaining walls and chimneys to custom stonework and foundations, our portfolio shows the range of work we do and the standard we hold ourselves to.</p>
-          <div class="hero-actions">
-            <a href="#portfolio" class="btn btn-secondary">View All Projects</a>
-          </div>
-        </div>
-
-        <div class="portfolio-grid">
-          <article class="portfolio-card">
-            <div class="portfolio-card-image">Image placeholder</div>
-            <h3>Project title</h3>
-            <p>[PENDING MARTY CONFIRMATION] Short project description will be added later.</p>
-          </article>
-
-          <article class="portfolio-card">
-            <div class="portfolio-card-image">Image placeholder</div>
-            <h3>Project title</h3>
-            <p>[PENDING MARTY CONFIRMATION] Short project description will be added later.</p>
-          </article>
-
-          <article class="portfolio-card">
-            <div class="portfolio-card-image">Image placeholder</div>
-            <h3>Project title</h3>
-            <p>[PENDING MARTY CONFIRMATION] Short project description will be added later.</p>
-          </article>
-
-          <article class="portfolio-card">
-            <div class="portfolio-card-image">Image placeholder</div>
-            <h3>Project title</h3>
-            <p>[PENDING MARTY CONFIRMATION] Short project description will be added later.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="areas">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Where We Work</p>
-          <h2>Proudly Serving Our Local Communities</h2>
-          <p>MJV Masonry & Contracting is locally based and serves homeowners and businesses throughout the surrounding area.</p>
-          <p><strong>Service area:</strong> Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, Mississauga</p>
-          <p>If you're not sure whether we cover your area, reach out — we're happy to let you know.</p>
-          <a href="#contact" class="btn btn-primary">Contact Us</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">About MJV</p>
-          <h2>Real Skill. Real Experience. Real Results.</h2>
-          <p>MJV Masonry & Contracting was founded by Marty Vandenberg with one straightforward goal: deliver quality masonry work that holds up over time and leaves customers glad they called.</p>
-          <p>After being in the business for many years, Marty brings deep trade knowledge and craftsmanship to every job.</p>
-          <p><strong>Years of experience:</strong> Approximately 50 years in the trade, ~30 years operating the business.</p>
-          <p><strong>Qualifications:</strong> Business insurance and safety training.</p>
-          <p><strong>What sets us apart:</strong> Better craftsmanship, more experience, restoration expertise, attention to detail, customer service, quality materials, and reliability.</p>
-          
-        </div>
+    <!-- Mobile Navigation Panel -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stonebeige-200 px-4 py-6 space-y-3">
+        <a href="#services" class="block text-stonebeige-900 hover:text-brickred-accent py-2 font-medium">Services</a>
+        <a href="#craftsmanship" class="block text-stonebeige-900 hover:text-brickred-accent py-2 font-medium">Why MJV</a>
+        <a href="#portfolio" class="block text-stonebeige-900 hover:text-brickred-accent py-2 font-medium">Portfolio</a>
+        <a href="#service-areas" class="block text-stonebeige-900 hover:text-brickred-accent py-2 font-medium">Service Areas</a>
+        <a href="#urgency" class="block text-red-700 hover:text-brickred-accent py-2 font-bold">Urgent Repairs</a>
+        <a href="#about" class="block text-stonebeige-900 hover:text-brickred-accent py-2 font-medium">About Marty</a>
+        <a href="#faq" class="block text-stonebeige-900 hover:text-brickred-accent py-2 font-medium">FAQ</a>
         
-      </div>
-    </section>
-
-    <section class="section section-alt" id="quote">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Get Started</p>
-          <h2>Ready to Talk About Your Project?</h2>
-          <p>Whether you have detailed plans or just an idea of what you need, we're glad to take a look and give you a straightforward quote. No pressure, no runaround.</p>
-          <p>Fill out the form below or reach us directly at 289-682-1800 or <a href="mailto:mjvm60@gmail.com">mjvm60@gmail.com</a>.</p>
+        <div class="pt-4 border-t border-stonebeige-100 flex flex-col gap-3">
+            <a href="tel:2896821800" class="text-charcoal-900 font-semibold flex items-center gap-2 py-2">
+                <i class="fa-solid fa-phone text-brickred-accent"></i> 289-682-1800
+            </a>
+            <a href="#quote-section" class="w-full text-center bg-brickred-accent hover:bg-brickred-900 text-white font-medium py-3 rounded">
+                Request a Quote
+            </a>
         </div>
-
-        <form class="contact-form" action="#" method="post">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" disabled />
-          </label>
-          <label>
-            Phone Number
-            <input type="tel" name="phone" placeholder="Phone number" disabled />
-          </label>
-          <label>
-            Email Address
-            <input type="email" name="email" placeholder="you@example.com" disabled />
-          </label>
-          <label>
-            Project Type
-            <select name="project-type" disabled>
-              <option value="">Select a project type</option>
-              <option value="residential">Residential</option>
-              <option value="commercial">Commercial</option>
-              <option value="restoration">Restoration</option>
-              <option value="heritage-restoration">Heritage Restoration</option>
-              <option value="custom-masonry">Custom Masonry</option>
-              <option value="repairs">Repairs</option>
-              <option value="other">Other</option>
-            </select>
-          </label>
-          <label>
-            Project Location
-            <input type="text" name="location" placeholder="Project location" disabled />
-          </label>
-          <label>
-            Urgency
-            <select name="urgency" disabled>
-              <option value="">Select urgency level</option>
-              <option value="routine">Routine</option>
-              <option value="moderate">Moderate</option>
-              <option value="urgent">Urgent</option>
-              <option value="emergency">Emergency</option>
-            </select>
-          </label>
-          <label>
-            Brief Description
-            <textarea name="description" rows="4" placeholder="Tell us about the project" disabled></textarea>
-          </label>
-          <label>
-            Preferred Contact Method
-            <input type="text" name="contact-method" placeholder="Best way to reach you" disabled />
-          </label>
-          <button type="button" class="btn btn-primary" disabled>Send My Request</button>
-        </form>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Common Questions</p>
-          <h2>What People Usually Ask Us</h2>
-          <p>We know hiring a contractor comes with questions. Here are answers to the ones we hear most often. Don't see what you're looking for? Call or message us directly — we're easy to reach.</p>
-        </div>
-
-        <div class="faq-list">
-          <details>
-            <summary>Do you provide free estimates?</summary>
-            <p>Quotes are provided after reviewing project details and photos. Site visits may be required depending on the job.</p>
-          </details>
-          <details>
-            <summary>Do you handle small repairs?</summary>
-            <p>Yes, including brick repair, chimney issues, and structural fixes.</p>
-          </details>
-          <details>
-            <summary>Do you offer emergency repairs?</summary>
-            <p>Yes, especially for safety-related issues like falling brick or unstable structures.</p>
-          </details>
-          <details>
-            <summary>Do you work on heritage buildings?</summary>
-            <p>Yes, including restoration and repair work.</p>
-          </details>
-          <details>
-            <summary>Do you travel outside your main area?</summary>
-            <p>Yes, depending on the project. Travel fees may apply.</p>
-          </details>
-          <details>
-            <summary>How long are quotes valid?</summary>
-            <p>Quotes are valid for 3 months.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <div class="section-heading">
-            <p class="eyebrow">Get In Touch</p>
-            <h2>Let's Talk</h2>
-            <p>Have a question or ready to get a project underway? Reach out to MJV Masonry & Contracting and we'll get back to you promptly.</p>
-          </div>
-
-          <div class="contact-details">
-            <p><strong>Phone:</strong> 289-682-1800</p>
-            <p><strong>Email:</strong> <a href="mailto:mjvm60@gmail.com">mjvm60@gmail.com</a></p>
-            <p><strong>Business Hours:</strong> By appointment</p>
-            <p>We look forward to hearing about your project.</p>
-          </div>
-        </div>
-
-        <form class="contact-form" action="#" method="post">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" disabled />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="you@example.com" disabled />
-          </label>
-          <label>
-            Project details
-            <textarea name="message" rows="4" placeholder="Describe the work" disabled></textarea>
-          </label>
-          <button type="button" class="btn btn-secondary">Call 289-682-1800</button>
-          <p class="form-note">Form details will be finalized after Marty confirms the business offerings.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> MJV Masonry & Contracting. All rights reserved.</p>
-      <p>Website project prepared by IHP student team.</p>
     </div>
-  </footer>
+</header>
 
-  <script src="js/main.js"></script>
+<!-- Hero Section -->
+<section class="relative bg-stonebeige-100 text-charcoal-900 py-16 lg:py-24 overflow-hidden border-b border-stonebeige-200">
+    <!-- Texture overlay -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="brick-hero" width="60" height="30" patternUnits="userSpaceOnUse">
+                    <rect width="60" height="30" fill="none" stroke="#000000" stroke-width="1" />
+                    <line x1="30" y1="0" x2="30" y2="15" stroke="#000000" stroke-width="1" />
+                    <line x1="0" y1="15" x2="60" y2="15" stroke="#000000" stroke-width="1" />
+                    <line x1="15" y1="15" x2="15" y2="30" stroke="#000000" stroke-width="1" />
+                    <line x1="45" y1="15" x2="45" y2="30" stroke="#000000" stroke-width="1" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#brick-hero)" />
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Copy -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-stonebeige-200 text-stonebeige-900 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-stonebeige-300">
+                    <i class="fa-solid fa-hammer"></i> 50 Years of Masonry Heritage
+                </div>
+                <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-charcoal-900 leading-tight">
+                    Traditional Masonry Repairs Built to Last Generations
+                </h1>
+                <p class="text-base sm:text-lg text-stonebeige-800 max-w-xl leading-relaxed">
+                    Marty Vandenberg of <strong class="text-charcoal-900">MJV Masonry and Contracting</strong> brings a half-century of trade expertise to every restoration, brick repair, and stonework project in the Hamilton and Oakville regions. No shortcuts, just real craftsmanship.
+                </p>
+
+                <!-- Action Blocks -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                    <a href="#quote-section" class="inline-flex justify-center items-center bg-brickred-accent hover:bg-brickred-900 text-white font-medium text-base px-6 py-3.5 rounded shadow-lg transition-all duration-150">
+                        <i class="fa-solid fa-file-contract mr-2 text-stonebeige-200"></i> Request a Quote
+                    </a>
+                    <a href="#booking-section" class="inline-flex justify-center items-center bg-white hover:bg-stonebeige-100 text-charcoal-900 border border-stonebeige-300 font-medium text-base px-6 py-3.5 rounded shadow-sm transition-all duration-150">
+                        <i class="fa-solid fa-calendar-check mr-2 text-brickred-accent"></i> Book Consultation Info
+                    </a>
+                </div>
+
+                <!-- Live Quick Call-out -->
+                <p class="text-xs text-stonebeige-800 flex items-center gap-2 pt-2">
+                    <span class="inline-block w-2.5 h-2.5 bg-green-600 rounded-full animate-pulse"></span>
+                    <span>Direct line: Call Marty at <a href="tel:2896821800" class="font-bold underline text-charcoal-900 hover:text-brickred-accent">289-682-1800</a></span>
+                </p>
+            </div>
+
+            <!-- Hero Image Block with Craftsmanship Placeholder -->
+            <div class="lg:col-span-5">
+                <div class="bg-white p-3.5 rounded-xl border border-stonebeige-200 shadow-xl">
+                    <div class="relative rounded-lg overflow-hidden bg-stonebeige-100 aspect-[4/3] flex items-center justify-center text-center p-6">
+                        <!-- Custom decorative pattern simulating masonry tools -->
+                        <div class="absolute inset-0 opacity-10 pointer-events-none">
+                            <i class="fa-solid fa-trowel text-9xl absolute -bottom-10 -right-10 transform rotate-12"></i>
+                        </div>
+                        <div class="space-y-4 relative z-10">
+                            <div class="w-16 h-16 bg-stonebeige-200 text-brickred-accent rounded-full flex items-center justify-center mx-auto border border-stonebeige-300">
+                                <i class="fa-solid fa-trowel text-2xl"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase tracking-widest text-stonebeige-800 font-bold mb-1">IMAGE PLACEHOLDER</span>
+                                <h3 class="font-serif font-bold text-lg text-charcoal-900">[PENDING MARTY PHOTO SELECTION]</h3>
+                                <p class="text-xs text-stonebeige-800 max-w-xs mx-auto mt-2 italic">
+                                    "A perfect close-up photo showing neat, struck mortar joints, solid red clay bricks, or a heritage chimney rebuild."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex items-center justify-between text-xs text-stonebeige-800 px-1">
+                        <span><i class="fa-solid fa-shield-halved mr-1 text-brickred-accent"></i> Fully Insured Business</span>
+                        <span><i class="fa-solid fa-circle-check mr-1 text-brickred-accent"></i> Safety Trained</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Trust & Experience Section -->
+<section class="bg-white py-12 border-b border-stonebeige-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <!-- Experience Block -->
+            <div class="flex items-start gap-4 p-4 rounded-lg bg-stonebeige-50 border border-stonebeige-200">
+                <div class="p-3 bg-stonebeige-200 text-brickred-accent rounded-md shrink-0">
+                    <i class="fa-solid fa-award text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-2xl text-charcoal-900 leading-none">~50 Years</h3>
+                    <p class="text-xs text-stonebeige-800 font-medium uppercase tracking-wider mt-1.5">In Masonry Trade</p>
+                    <p class="text-xs text-stonebeige-800 mt-1">Marty knows nearly all there is to know about the trade.</p>
+                </div>
+            </div>
+
+            <!-- Years in Business Block -->
+            <div class="flex items-start gap-4 p-4 rounded-lg bg-stonebeige-50 border border-stonebeige-200">
+                <div class="p-3 bg-stonebeige-200 text-brickred-accent rounded-md shrink-0">
+                    <i class="fa-solid fa-business-time text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-2xl text-charcoal-900 leading-none">~30 Years</h3>
+                    <p class="text-xs text-stonebeige-800 font-medium uppercase tracking-wider mt-1.5">Business Owner</p>
+                    <p class="text-xs text-stonebeige-800 mt-1">Serving local communities with stable, direct accountability.</p>
+                </div>
+            </div>
+
+            <!-- Insurance Block -->
+            <div class="flex items-start gap-4 p-4 rounded-lg bg-stonebeige-50 border border-stonebeige-200">
+                <div class="p-3 bg-stonebeige-200 text-brickred-accent rounded-md shrink-0">
+                    <i class="fa-solid fa-building-shield text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900 leading-none">Business Insurance</h3>
+                    <p class="text-xs text-stonebeige-800 font-medium uppercase tracking-wider mt-1.5">Fully Insured</p>
+                    <p class="text-xs text-stonebeige-800 mt-1">Protecting your property and structural assets completely.</p>
+                </div>
+            </div>
+
+            <!-- Safety Block -->
+            <div class="flex items-start gap-4 p-4 rounded-lg bg-stonebeige-50 border border-stonebeige-200">
+                <div class="p-3 bg-stonebeige-200 text-brickred-accent rounded-md shrink-0">
+                    <i class="fa-solid fa-hard-hat text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900 leading-none">Safety Training</h3>
+                    <p class="text-xs text-stonebeige-800 font-medium uppercase tracking-wider mt-1.5">Certified Safety</p>
+                    <p class="text-xs text-stonebeige-800 mt-1">Professional standards on site at all times.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Expert Masonry Contracting</h2>
+            <div class="w-16 h-1 bg-brickred-accent mx-auto mt-4 mb-4"></div>
+            <p class="text-stonebeige-800">
+                MJV Masonry and Contracting provides specialized residential and commercial brick, stone, and structural repairs. Marty does not offer quick cosmetic patches—he does structural, heavy-duty work meant to last.
+            </p>
+        </div>
+
+        <!-- 6 Clean Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Brick Repair & Repointing -->
+            <div class="bg-white rounded-xl shadow-sm border border-stonebeige-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-stonebeige-100 text-brickred-accent rounded-lg flex items-center justify-center border border-stonebeige-200">
+                        <i class="fa-solid fa-trowel text-xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900">1. Brick Repair & Repointing</h3>
+                    <p class="text-sm text-stonebeige-800 leading-relaxed">
+                        Crumbling mortar and spalling bricks invite serious water damage. Marty grinds out failing paths and replaces mortar or bricks cleanly to maintain your building's structural health.
+                    </p>
+                    <ul class="text-xs text-stonebeige-800 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Brick repair & replacement</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Custom brick repointing</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Color & mortar profile matching</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2: Chimney Repair & Rebuilds -->
+            <div class="bg-white rounded-xl shadow-sm border border-stonebeige-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-stonebeige-100 text-brickred-accent rounded-lg flex items-center justify-center border border-stonebeige-200">
+                        <i class="fa-solid fa-house-chimney text-xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900">2. Chimney Repair & Rebuilds</h3>
+                    <p class="text-sm text-stonebeige-800 leading-relaxed">
+                        High winds and freeze-thaw cycles break down chimneys first. From small brick mortar tune-ups to complete structural chimney tear-downs and rebuilds, Marty handles it safely.
+                    </p>
+                    <ul class="text-xs text-stonebeige-800 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Chimney tuckpointing & repairs</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Complete chimney teardowns</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Crown repairs & flashing prep</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3: Stonework & Custom Masonry -->
+            <div class="bg-white rounded-xl shadow-sm border border-stonebeige-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-stonebeige-100 text-brickred-accent rounded-lg flex items-center justify-center border border-stonebeige-200">
+                        <i class="fa-solid fa-cubes text-xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900">3. Stonework & Custom Masonry</h3>
+                    <p class="text-sm text-stonebeige-800 leading-relaxed">
+                        Professional application of natural or manufactured stones for a high-end architectural look. Includes fireplaces, custom brick installations, and complex outdoor living spaces.
+                    </p>
+                    <ul class="text-xs text-stonebeige-800 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Natural stonework layouts</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Manufactured stone veneers</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Indoor fireplaces & outdoor kitchens</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 4: Restoration & Heritage Masonry -->
+            <div class="bg-white rounded-xl shadow-sm border border-stonebeige-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-stonebeige-100 text-brickred-accent rounded-lg flex items-center justify-center border border-stonebeige-200">
+                        <i class="fa-solid fa-monument text-xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900">4. Restoration & Heritage Masonry</h3>
+                    <p class="text-sm text-stonebeige-800 leading-relaxed">
+                        Historic structures require lime-rich, soft mortars. Using heavy Portland cement on old brick causes catastrophic crushing. Marty understands old-world heritage matching.
+                    </p>
+                    <ul class="text-xs text-stonebeige-800 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Heritage-approved lime mortars</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Careful non-destructive cleaning</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Historical detail matching</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 5: Steps, Porches, Walkways & Retaining Walls -->
+            <div class="bg-white rounded-xl shadow-sm border border-stonebeige-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-stonebeige-100 text-brickred-accent rounded-lg flex items-center justify-center border border-stonebeige-200">
+                        <i class="fa-solid fa-stairs text-xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900">5. Steps, Porches & Walkways</h3>
+                    <p class="text-sm text-stonebeige-800 leading-relaxed">
+                        Unstable, shifting front steps are major slip-and-fall hazards. Marty builds heavy stone steps, level walkways, concrete block structures, and reinforced retaining walls.
+                    </p>
+                    <ul class="text-xs text-stonebeige-800 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Front steps & porch masonry</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Structural retaining walls</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Flagstone & heavy block work</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 6: Parging, Foundation & Water Repairs -->
+            <div class="bg-white rounded-xl shadow-sm border border-stonebeige-200 p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-stonebeige-100 text-brickred-accent rounded-lg flex items-center justify-center border border-stonebeige-200">
+                        <i class="fa-solid fa-faucet-drip text-xl"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-charcoal-900">6. Parging, Foundation & Water Repairs</h3>
+                    <p class="text-sm text-stonebeige-800 leading-relaxed">
+                        Moisture traveling through crumbling foundations degrades block networks. Marty applies clean sand-and-cement parging coats and seals concrete cracks to keep water out.
+                    </p>
+                    <ul class="text-xs text-stonebeige-800 space-y-1.5 pt-2">
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Smooth decorative parging</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Concrete block foundation repair</li>
+                        <li><i class="fa-solid fa-circle-check text-brickred-accent mr-1.5"></i> Water intrusion & spall protection</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Craftsmanship & Restoration Values -->
+<section id="craftsmanship" class="py-20 bg-white border-b border-stonebeige-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Graphic Detail Element -->
+            <div class="lg:col-span-5 order-last lg:order-first">
+                <div class="border-2 border-stonebeige-200 rounded-xl p-8 bg-stonebeige-50 relative">
+                    <div class="absolute -top-4 -left-4 bg-brickred-accent text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">
+                        Tradesman Standard
+                    </div>
+                    <h4 class="font-serif font-bold text-xl text-charcoal-900 mb-4">MJV Core Principles</h4>
+                    <p class="text-xs text-stonebeige-800 mb-6 italic leading-relaxed">
+                        "After working in this trade for about 50 years, you learn there is simply no shortcut to a solid mortar matrix. I match materials properly, keep structural foundations level, and charge fairly."
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-brickred-accent/10 text-brickred-accent flex items-center justify-center text-xs font-bold shrink-0">1</span>
+                            <div>
+                                <h5 class="text-sm font-bold text-charcoal-900">High-Grade Mortar Formulations</h5>
+                                <p class="text-xs text-stonebeige-800">We verify structural brick vintage to ensure correct aggregate levels and flex strength.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-brickred-accent/10 text-brickred-accent flex items-center justify-center text-xs font-bold shrink-0">2</span>
+                            <div>
+                                <h5 class="text-sm font-bold text-charcoal-900">Direct Contractor Accountability</h5>
+                                <p class="text-xs text-stonebeige-800">Marty is the master mason on your site. You will not deal with high-turnover subcontracting crews.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-brickred-accent/10 text-brickred-accent flex items-center justify-center text-xs font-bold shrink-0">3</span>
+                            <div>
+                                <h5 class="text-sm font-bold text-charcoal-900">Meticulous Joint Cleaning</h5>
+                                <p class="text-xs text-stonebeige-800">We grind cleanly to an even, stable depth to guarantee modern sealing compounds bond thoroughly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Content -->
+            <div class="lg:col-span-7 space-y-6">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Honest Masonry Built on Real Experience</h2>
+                <div class="w-16 h-1 bg-brickred-accent"></div>
+                <p class="text-stonebeige-800 leading-relaxed">
+                    Marty Vandenberg has spent approximately 50 years working with trowels, hammers, block mixers, and chisels. Operating his own contracting company for about 30 years, Marty values solid materials, accurate structural foundations, and reliable communication.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                    <div class="space-y-2">
+                        <h4 class="font-bold text-charcoal-900 flex items-center gap-2">
+                            <i class="fa-solid fa-gem text-brickred-accent text-sm"></i> Precise Detail Matching
+                        </h4>
+                        <p class="text-xs text-stonebeige-800">
+                            We match historical patterns, custom color profiles, and brick densities so repairs integrate seamlessly.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="font-bold text-charcoal-900 flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-brickred-accent text-sm"></i> Clean, Safe Work Sites
+                        </h4>
+                        <p class="text-xs text-stonebeige-800">
+                            Safety is prioritized. Debris is thoroughly swept away and hauled off daily to keep your walkways safe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Marty's Portfolio</h2>
+            <div class="w-16 h-1 bg-brickred-accent mx-auto mt-4 mb-4"></div>
+            <p class="text-stonebeige-800">
+                Marty has before-and-after photos of historical and modern projects across Hamilton. The image grids below represent actual slots being prepared for launch.
+            </p>
+            <span class="inline-block mt-3 bg-stonebeige-200 text-stonebeige-900 border border-stonebeige-300 px-3 py-1 rounded text-xs font-semibold uppercase">
+                [PENDING MARTY PHOTO SELECTION]
+            </span>
+        </div>
+
+        <!-- 6 Clean Gallery Placeholder Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Portfolio 1 -->
+            <div class="bg-white rounded-lg border border-stonebeige-200 overflow-hidden shadow-sm">
+                <div class="aspect-[4/3] bg-stonebeige-200 flex flex-col items-center justify-center p-6 text-center border-b border-stonebeige-100">
+                    <i class="fa-solid fa-cubes text-3xl text-stonebeige-800 mb-2"></i>
+                    <span class="text-[10px] font-bold text-stonebeige-900 uppercase tracking-widest">PHOTO SLOT 1</span>
+                    <span class="text-xs font-bold text-brickred-accent mt-1">[PENDING SELECTION]</span>
+                    <p class="text-xs text-stonebeige-800 mt-2 italic max-w-xs">"Brick Replacement and Corner Crack Repointing"</p>
+                </div>
+                <div class="p-4 bg-stonebeige-50 flex justify-between items-center text-xs">
+                    <span class="font-semibold text-charcoal-900">Brick Repair Project</span>
+                    <span class="text-stonebeige-800 font-medium">Hamilton, ON</span>
+                </div>
+            </div>
+
+            <!-- Portfolio 2 -->
+            <div class="bg-white rounded-lg border border-stonebeige-200 overflow-hidden shadow-sm">
+                <div class="aspect-[4/3] bg-stonebeige-200 flex flex-col items-center justify-center p-6 text-center border-b border-stonebeige-100">
+                    <i class="fa-solid fa-mountain text-3xl text-stonebeige-800 mb-2"></i>
+                    <span class="text-[10px] font-bold text-stonebeige-900 uppercase tracking-widest">PHOTO SLOT 2</span>
+                    <span class="text-xs font-bold text-brickred-accent mt-1">[PENDING SELECTION]</span>
+                    <p class="text-xs text-stonebeige-800 mt-2 italic max-w-xs">"Natural Stonework Fireplace Hearth Install"</p>
+                </div>
+                <div class="p-4 bg-stonebeige-50 flex justify-between items-center text-xs">
+                    <span class="font-semibold text-charcoal-900">Custom Stonework</span>
+                    <span class="text-stonebeige-800 font-medium">Burlington, ON</span>
+                </div>
+            </div>
+
+            <!-- Portfolio 3 -->
+            <div class="bg-white rounded-lg border border-stonebeige-200 overflow-hidden shadow-sm">
+                <div class="aspect-[4/3] bg-stonebeige-200 flex flex-col items-center justify-center p-6 text-center border-b border-stonebeige-100">
+                    <i class="fa-solid fa-house-chimney text-3xl text-stonebeige-800 mb-2"></i>
+                    <span class="text-[10px] font-bold text-stonebeige-900 uppercase tracking-widest">PHOTO SLOT 3</span>
+                    <span class="text-xs font-bold text-brickred-accent mt-1">[PENDING SELECTION]</span>
+                    <p class="text-xs text-stonebeige-800 mt-2 italic max-w-xs">"Complete Multi-Flue Brick Chimney Rebuild"</p>
+                </div>
+                <div class="p-4 bg-stonebeige-50 flex justify-between items-center text-xs">
+                    <span class="font-semibold text-charcoal-900">Chimney Work</span>
+                    <span class="text-stonebeige-800 font-medium">Oakville, ON</span>
+                </div>
+            </div>
+
+            <!-- Portfolio 4 -->
+            <div class="bg-white rounded-lg border border-stonebeige-200 overflow-hidden shadow-sm">
+                <div class="aspect-[4/3] bg-stonebeige-200 flex flex-col items-center justify-center p-6 text-center border-b border-stonebeige-100">
+                    <i class="fa-solid fa-monument text-3xl text-stonebeige-800 mb-2"></i>
+                    <span class="text-[10px] font-bold text-stonebeige-900 uppercase tracking-widest">PHOTO SLOT 4</span>
+                    <span class="text-xs font-bold text-brickred-accent mt-1">[PENDING SELECTION]</span>
+                    <p class="text-xs text-stonebeige-800 mt-2 italic max-w-xs">"Heritage Structural Lime Mortar Tuckpointing"</p>
+                </div>
+                <div class="p-4 bg-stonebeige-50 flex justify-between items-center text-xs">
+                    <span class="font-semibold text-charcoal-900">Restoration Project</span>
+                    <span class="text-stonebeige-800 font-medium">Dundas, ON</span>
+                </div>
+            </div>
+
+            <!-- Portfolio 5 -->
+            <div class="bg-white rounded-lg border border-stonebeige-200 overflow-hidden shadow-sm">
+                <div class="aspect-[4/3] bg-stonebeige-200 flex flex-col items-center justify-center p-6 text-center border-b border-stonebeige-100">
+                    <i class="fa-solid fa-stairs text-3xl text-stonebeige-800 mb-2"></i>
+                    <span class="text-[10px] font-bold text-stonebeige-900 uppercase tracking-widest">PHOTO SLOT 5</span>
+                    <span class="text-xs font-bold text-brickred-accent mt-1">[PENDING SELECTION]</span>
+                    <p class="text-xs text-stonebeige-800 mt-2 italic max-w-xs">"Rebuilt Flagstone Porch and Sandstone Stairs"</p>
+                </div>
+                <div class="p-4 bg-stonebeige-50 flex justify-between items-center text-xs">
+                    <span class="font-semibold text-charcoal-900">Steps & Porch Rebuild</span>
+                    <span class="text-stonebeige-800 font-medium">Stoney Creek, ON</span>
+                </div>
+            </div>
+
+            <!-- Portfolio 6 -->
+            <div class="bg-white rounded-lg border border-stonebeige-200 overflow-hidden shadow-sm">
+                <div class="aspect-[4/3] bg-stonebeige-200 flex flex-col items-center justify-center p-6 text-center border-b border-stonebeige-100">
+                    <i class="fa-solid fa-trowel text-3xl text-stonebeige-800 mb-2"></i>
+                    <span class="text-[10px] font-bold text-stonebeige-900 uppercase tracking-widest">PHOTO SLOT 6</span>
+                    <span class="text-xs font-bold text-brickred-accent mt-1">[PENDING SELECTION]</span>
+                    <p class="text-xs text-stonebeige-800 mt-2 italic max-w-xs">"Bespoke Manufactured Stone Feature Accent Wall"</p>
+                </div>
+                <div class="p-4 bg-stonebeige-50 flex justify-between items-center text-xs">
+                    <span class="font-semibold text-charcoal-900">Custom Masonry Layout</span>
+                    <span class="text-stonebeige-800 font-medium">Mississauga, ON</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Social Proof Pending Warning Section -->
+        <div class="mt-12 bg-white/50 border border-stonebeige-200 p-6 rounded-lg text-center max-w-xl mx-auto">
+            <h4 class="font-serif font-bold text-charcoal-900 flex items-center justify-center gap-2 mb-1">
+                <i class="fa-brands fa-facebook text-[#1877f2]"></i> Public Testimonials
+            </h4>
+            <span class="text-[11px] font-semibold text-brickred-accent uppercase">
+                [PENDING MARTY CONFIRMATION]
+            </span>
+            <p class="text-xs text-stonebeige-800 mt-2">
+                MJV Masonry's Facebook page reviews will display here as soon as credentials are confirmed. Marty's existing high-satisfaction notes are being collected.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas Section -->
+<section id="service-areas" class="py-20 bg-white border-b border-stonebeige-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Service Area Narrative details -->
+            <div class="lg:col-span-6 space-y-6">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Serving Hamilton & Surrounding Communities</h2>
+                <div class="w-16 h-1 bg-brickred-accent"></div>
+                <p class="text-stonebeige-800 leading-relaxed">
+                    Marty primarily operates within a <strong class="text-charcoal-900">1-hour maximum travel radius</strong> from his core bases. Projects of significant scale or historical heritage value that sit outside this standard travel radius are reviewed manually.
+                </p>
+
+                <!-- Clean, non-corporate city map list -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm font-semibold text-charcoal-800">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Hamilton</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Burlington</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Stoney Creek</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Oakville</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Grimsby</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Dundas</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brickred-accent"></i> Mississauga</div>
+                </div>
+
+                <p class="text-xs text-stonebeige-800 italic pt-2">
+                    *Note: Travel fees may sometimes apply depending on total commute and overall job scale.
+                </p>
+
+                <!-- Interactive Travel Checker UI (Real Input Logic) -->
+                <div class="bg-stonebeige-50 border border-stonebeige-200 rounded-lg p-5 mt-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1">
+                        Quick Service Radius Check
+                    </h4>
+                    <p class="text-xs text-stonebeige-800 mb-3">Enter your Ontario city or township to verify availability.</p>
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <input type="text" id="checker-input" placeholder="e.g. Grimsby, Oakville" class="flex-1 px-3 py-2.5 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
+                        <button id="checker-btn" class="bg-brickred-accent hover:bg-brickred-900 text-white font-bold text-xs px-5 py-2.5 rounded transition-all duration-150">
+                            Verify Area
+                        </button>
+                    </div>
+                    <div id="checker-feedback" class="mt-3 text-xs font-semibold hidden"></div>
+                </div>
+            </div>
+
+            <!-- Interactive travel representation layout -->
+            <div class="lg:col-span-6">
+                <div class="bg-stonebeige-100 p-4 rounded-xl border border-stonebeige-200 shadow-inner relative aspect-[4/3] overflow-hidden flex items-center justify-center">
+                    <div class="absolute inset-0 bg-stonebeige-200 opacity-40" style="background-image: radial-gradient(#292524 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    
+                    <!-- Simulated Map Overlay Graphic -->
+                    <div class="relative w-full h-full flex items-center justify-center">
+                        <div class="absolute w-56 h-56 rounded-full bg-brickred-accent/10 border-2 border-dashed border-brickred-accent/40 animate-pulse flex items-center justify-center">
+                            <span class="text-[10px] font-bold text-brickred-accent uppercase bg-white px-2 py-1 rounded shadow-sm">Regular Max Travel Radius (~1 Hr)</span>
+                        </div>
+                        <div class="absolute w-36 h-36 rounded-full bg-stonebeige-300/30 border border-stonebeige-300"></div>
+                        
+                        <!-- Core Pin Hamilton Base -->
+                        <div class="absolute flex flex-col items-center">
+                            <i class="fa-solid fa-location-pin text-3xl text-brickred-accent drop-shadow-md"></i>
+                            <span class="text-[9px] bg-charcoal-900 text-white font-bold px-1.5 py-0.5 rounded shadow mt-1">Hamilton Zone Base</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Priority / Urgent Repairs Warning Panel -->
+<section id="urgency" class="py-16 bg-brickred-50 border-y-4 border-brickred-accent">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div class="w-12 h-12 bg-red-100 text-brickred-accent rounded-full flex items-center justify-center mx-auto border border-red-200">
+            <i class="fa-solid fa-triangle-exclamation text-xl animate-bounce"></i>
+        </div>
+        <div class="space-y-2">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-red-900">Do You Have Urgent Structural Damage?</h2>
+            <p class="text-sm text-red-800 max-w-2xl mx-auto leading-relaxed">
+                If your property shows signs of active structural decay, please flag it immediately. Marty reviews safety-related issues first. We cannot promise instant emergency services, but we do prioritize these serious cases.
+            </p>
+        </div>
+
+        <!-- Severe Damage Checklist Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-left max-w-2xl mx-auto text-xs font-bold text-red-900 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-brickred-accent"></i> Falling brickwork</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-brickred-accent"></i> Loose facade stones</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-brickred-accent"></i> Leaning chimneys</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-brickred-accent"></i> Severe foundation water intrusion</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-brickred-accent"></i> Unsafe masonry steps</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-brickred-accent"></i> Settling structural cracks</div>
+        </div>
+
+        <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="#quote-section" onclick="setUrgentPriority()" class="w-full sm:w-auto inline-flex justify-center items-center bg-brickred-accent hover:bg-brickred-900 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded shadow">
+                Flag High-Priority Review
+            </a>
+            <span class="text-xs text-red-800 font-medium">Or direct call: <a href="tel:2896821800" class="underline font-bold">289-682-1800</a></span>
+        </div>
+    </div>
+</section>
+
+<!-- Request a Quote Section -->
+<section id="quote-section" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-md border border-stonebeige-200 overflow-hidden">
+            
+            <div class="bg-charcoal-900 text-white p-6 sm:p-8 border-b-4 border-brickred-accent">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-stonebeige-100">Describe Your Masonry Project</h3>
+                        <p class="text-xs text-stonebeige-300 mt-1">Marty provides accurate estimates after reviewing photos and project details.</p>
+                    </div>
+                    <span class="text-[10px] bg-brickred-accent/20 text-brickred-accent border border-brickred-accent/30 font-bold px-2 py-0.5 rounded uppercase shrink-0">
+                        Quote Form Link Pending
+                    </span>
+                </div>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6" id="quote-form-container">
+                <!-- Quote constraints warning -->
+                <div class="p-4 bg-stonebeige-50 border border-stonebeige-200 rounded text-xs text-stonebeige-800 leading-relaxed">
+                    <p class="font-bold text-charcoal-900 mb-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-info-circle text-brickred-accent"></i> Marty's Quoting Rules:
+                    </p>
+                    MJV Masonry provides phone estimates only after photos have been shared. Site visits depend on project type, and a site visit fee may apply. To receive a response, you must provide your address, phone number, and a thorough project description.
+                </div>
+
+                <!-- Custom Mock Interactive Form -->
+                <form id="quote-form" class="space-y-4" onsubmit="handleQuoteSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Your Full Name *</label>
+                            <input type="text" id="quote-name" required placeholder="e.g. Marty Vandenberg" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Primary Phone Number *</label>
+                            <input type="tel" id="quote-phone" required placeholder="e.g. 289-682-1800" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Email Address</label>
+                            <input type="email" id="quote-email" placeholder="e.g. mjvm60@gmail.com" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">City / Township *</label>
+                            <select id="quote-city" required class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white">
+                                <option value="">-- Select City --</option>
+                                <option value="Hamilton">Hamilton</option>
+                                <option value="Burlington">Burlington</option>
+                                <option value="Stoney Creek">Stoney Creek</option>
+                                <option value="Oakville">Oakville</option>
+                                <option value="Grimsby">Grimsby</option>
+                                <option value="Dundas">Dundas</option>
+                                <option value="Mississauga">Mississauga</option>
+                                <option value="Other">Other (Travel limits may apply)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Property Street Address *</label>
+                        <input type="text" id="quote-address" required placeholder="e.g. 123 Heritage Way" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Project Urgency *</label>
+                            <select id="quote-urgency" required class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white">
+                                <option value="">-- Select Urgency --</option>
+                                <option value="urgent">Urgent Damage (Falling brick / leaning chimney)</option>
+                                <option value="immediate">Immediate Repair Wanted (Next 3 weeks)</option>
+                                <option value="flexible">Flexible Planning (Next 1-3 months)</option>
+                                <option value="planning">Gathering Estimates</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Preferred Callback Time *</label>
+                            <select id="quote-callback" required class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white">
+                                <option value="">-- Select Time --</option>
+                                <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                                <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Project Description *</label>
+                        <textarea id="quote-description" required rows="4" placeholder="Please describe what needs repair, brick count estimate if known, chimney height, or foundation problems..." class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent"></textarea>
+                    </div>
+
+                    <!-- Custom upload placeholder -->
+                    <div class="bg-stonebeige-50 border-2 border-dashed border-stonebeige-200 p-6 rounded text-center">
+                        <i class="fa-solid fa-camera text-2xl text-stonebeige-800 mb-1"></i>
+                        <span class="block text-xs font-semibold text-charcoal-900">Upload Project Photos</span>
+                        <span class="block text-[10px] text-stonebeige-800 mt-1">PNG, JPG formats supported. Photos are highly preferred before quoting.</span>
+                        <div class="mt-3">
+                            <label class="cursor-pointer bg-white border border-stonebeige-200 hover:bg-stonebeige-100 text-stonebeige-900 font-bold text-xs px-3 py-1.5 rounded transition-all">
+                                Select Photos
+                                <input type="file" id="quote-photos" multiple accept="image/*" class="hidden" onchange="handleFilePlaceholder(this)">
+                            </label>
+                        </div>
+                        <div id="file-count" class="text-xs font-bold text-brickred-accent mt-2 hidden"></div>
+                    </div>
+
+                    <!-- Subtle Minimum Notice -->
+                    <div class="text-[11px] text-stonebeige-800 text-center italic">
+                        Please note: MJV Masonry has a standard minimum charge of $200 per project.
+                    </div>
+
+                    <div class="pt-4 flex flex-col gap-2">
+                        <!-- Pending placeholder indicator -->
+                        <span class="text-[10px] text-brickred-accent font-bold uppercase text-center block">
+                            [QUOTE FORM LINK PENDING]
+                        </span>
+                        <button type="submit" class="w-full bg-brickred-accent hover:bg-brickred-900 text-white font-bold py-3 text-xs sm:text-sm rounded shadow transition-all duration-150">
+                            Submit Request for Quote
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Custom Quote success status -->
+            <div id="quote-success" class="p-8 text-center space-y-6 hidden">
+                <div class="w-16 h-16 bg-green-100 text-green-800 rounded-full mx-auto flex items-center justify-center border-2 border-green-300">
+                    <i class="fa-solid fa-circle-check text-2xl animate-bounce"></i>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-serif text-2xl font-bold text-charcoal-900">Estimate Request Simulated!</h3>
+                    <p class="text-xs text-stonebeige-800 max-w-md mx-auto">
+                        In production, this submission will transmit address details, descriptions, and uploaded photos directly to Marty.
+                    </p>
+                </div>
+                <button onclick="resetQuoteForm()" class="text-xs font-bold text-brickred-accent hover:underline">
+                    Reset Form Prototype
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Book a Call / Site Visit Section -->
+<section id="booking-section" class="py-20 bg-white border-b border-stonebeige-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-stonebeige-100 rounded-2xl shadow-sm border border-stonebeige-200 overflow-hidden">
+            
+            <div class="p-6 sm:p-8 bg-charcoal-900 text-white border-b border-charcoal-800 flex justify-between items-start gap-4">
+                <div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold">Schedule Call / Visit Window</h3>
+                    <p class="text-xs text-stonebeige-300 mt-1">Book quote calls or on-site inspections directly with Marty.</p>
+                </div>
+                <span class="text-[10px] bg-brickred-accent/20 text-brickred-accent border border-brickred-accent/30 font-bold px-2 py-0.5 rounded uppercase shrink-0">
+                    Booking Link Pending
+                </span>
+            </div>
+
+            <!-- Interactive Calendar Grid layout -->
+            <div class="p-6 sm:p-8 space-y-6" id="booking-form-container">
+                <div class="p-4 bg-white border border-stonebeige-200 rounded text-xs text-stonebeige-800 leading-relaxed">
+                    <p class="font-bold text-charcoal-900 mb-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-calendar text-brickred-accent"></i> Scheduling Rules:
+                    </p>
+                    Quote calls and site visits are available Monday to Saturday. No Sunday services are provided. Urgent safety-related tasks should be submitted via the quote panel first.
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Day Picker -->
+                    <div class="md:col-span-7">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-3">Select Consultation Date:</span>
+                        <div class="grid grid-cols-7 text-center text-[10px] font-bold text-stonebeige-800 mb-2 uppercase tracking-widest">
+                            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1.5 text-center" id="calendar-grid">
+                            <span class="p-2 text-xs text-stonebeige-300">28</span>
+                            <span class="p-2 text-xs text-stonebeige-300">29</span>
+                            <span class="p-2 text-xs text-stonebeige-300">30</span>
+                            <button type="button" onclick="selectBookingDate(1)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-1">1</button>
+                            <button type="button" onclick="selectBookingDate(2)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-2">2</button>
+                            <button type="button" onclick="selectBookingDate(3)" class="p-2 text-xs font-bold rounded bg-brickred-accent text-white shadow" id="btn-day-3">3</button>
+                            <button type="button" onclick="selectBookingDate(4)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-4">4</button>
+                            
+                            <button type="button" onclick="selectBookingDate(5)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-5">5</button>
+                            <button type="button" onclick="selectBookingDate(6)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-6">6</button>
+                            <button type="button" onclick="selectBookingDate(7)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-7">7</button>
+                            <button type="button" onclick="selectBookingDate(8)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-8">8</button>
+                            <button type="button" onclick="selectBookingDate(9)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-9">9</button>
+                            <button type="button" onclick="selectBookingDate(10)" class="p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200" id="btn-day-10">10</button>
+                            <span class="p-2 text-xs text-stonebeige-300 font-bold">11</span>
+                        </div>
+                        <span class="block text-[10px] text-stonebeige-800 italic mt-3 text-right">No Sunday Appointments Available</span>
+                    </div>
+
+                    <!-- Time Slots / Booking Panel -->
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-4">
+                        <div>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-3">Available Callback Slots:</span>
+                            <div class="grid grid-cols-1 gap-2" id="time-slots-panel">
+                                <button type="button" onclick="selectBookingTime('Morning (8:00 AM - 12:00 PM)')" class="px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900" id="slot-morning">Morning Callback</button>
+                                <button type="button" onclick="selectBookingTime('Afternoon (12:00 PM - 5:00 PM)')" class="px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900" id="slot-afternoon">Afternoon Callback</button>
+                                <button type="button" onclick="selectBookingTime('Evening (5:00 PM - 8:00 PM)')" class="px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900" id="slot-evening">Evening Callback</button>
+                            </div>
+                        </div>
+
+                        <!-- Summary Block -->
+                        <div class="pt-4 border-t border-stonebeige-300 space-y-3">
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div>
+                                    <span class="block text-stonebeige-800">Target Date:</span>
+                                    <span class="font-bold text-charcoal-900" id="summary-date">July 3, 2026</span>
+                                </div>
+                                <div>
+                                    <span class="block text-stonebeige-800">Slot Window:</span>
+                                    <span class="font-bold text-charcoal-900" id="summary-time">None Selected</span>
+                                </div>
+                            </div>
+                            <input type="tel" id="booking-phone" placeholder="Enter Phone Number *" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white">
+                            
+                            <div class="pt-2">
+                                <span class="text-[9px] text-brickred-accent font-bold uppercase text-center block mb-1">
+                                    [BOOKING LINK PENDING]
+                                </span>
+                                <button type="button" onclick="submitBooking()" class="w-full bg-brickred-accent hover:bg-brickred-900 text-white text-xs font-bold py-2.5 rounded shadow">
+                                    Confirm Call Booking
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Success Pane -->
+            <div id="booking-success" class="p-8 text-center space-y-6 hidden">
+                <div class="w-16 h-16 bg-green-100 text-green-800 rounded-full mx-auto flex items-center justify-center border-2 border-green-300">
+                    <i class="fa-solid fa-calendar-check text-2xl animate-bounce"></i>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-serif text-2xl font-bold text-charcoal-900">Appointment Call Blocked!</h3>
+                    <p class="text-xs text-stonebeige-800">
+                        MJV Masonry calendar will reserve <strong id="success-date-str">July 3</strong> during <strong id="success-time-str">Morning</strong> window. Marty will follow up to finalize the address detail.
+                    </p>
+                </div>
+                <button onclick="resetBooking()" class="text-xs font-bold text-brickred-accent hover:underline">
+                    Reset Calendar Slot
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-charcoal-900 text-white border-b border-charcoal-800 relative">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="10 10"/>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Picture Area -->
+            <div class="lg:col-span-5">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-brickred-accent rounded-lg -z-10"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-charcoal-800 rounded-lg -z-10"></div>
+                    <div class="rounded-xl overflow-hidden border-4 border-charcoal-800 shadow-2xl relative">
+                        <!-- Custom portrait placeholder with traditional feel -->
+                        <div class="aspect-[4/5] bg-stonebeige-800 flex flex-col items-center justify-center p-6 text-center text-stonebeige-200">
+                            <i class="fa-solid fa-person-digging text-5xl text-brickred-accent mb-3"></i>
+                            <span class="text-xs uppercase tracking-widest text-stonebeige-100 font-bold mb-1">PORTRAIT PLACEHOLDER</span>
+                            <span class="text-sm font-serif font-bold text-stonebeige-200">[PENDING PHOTO]</span>
+                            <p class="text-[11px] text-stonebeige-300 mt-3 max-w-xs italic">
+                                "A natural on-site photo of Marty Vandenberg standing beside a recently completed natural stonework fireplace or brick repointing job."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio Copy -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 text-brickred-accent text-xs font-bold uppercase tracking-widest">
+                    <i class="fa-solid fa-user-gear"></i> Master Mason Owner
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Behind the Trowel: Marty Vandenberg</h2>
+                <div class="w-16 h-1 bg-brickred-accent"></div>
+                <p class="text-stonebeige-100 leading-relaxed text-sm">
+                    In the masonry trade, experience is the only textbook that matters. I have spent approximately 50 years working with natural stone, manufactured bricks, and structural foundations. I founded MJV Masonry and Contracting about 30 years ago, focusing entirely on high-quality restorations and heritage block work.
+                </p>
+                <blockquote class="border-l-4 border-brickred-accent pl-4 py-1 italic text-stonebeige-200 text-sm">
+                    "After being in the business for a long time, you know a good deal of what there is to know about masonry. I ensure your chimney, steps, porches, and fireplaces are built on verified foundations."
+                </blockquote>
+                <p class="text-stonebeige-100 leading-relaxed text-sm">
+                    If you are looking for an experienced trade specialist who values clear communication, structural integrity, and honest customer service, I am ready to review your project description.
+                </p>
+
+                <!-- Certification trust row -->
+                <div class="pt-6 border-t border-charcoal-800 grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-shield text-2xl text-brickred-accent"></i>
+                        <span class="text-xs font-semibold text-stonebeige-200">Fully Insured Trade Business</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-clipboard-check text-2xl text-brickred-accent"></i>
+                        <span class="text-xs font-semibold text-stonebeige-200">Safety Compliance Trained</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Masonry & Repair FAQs</h2>
+            <div class="w-16 h-1 bg-brickred-accent mx-auto mt-4 mb-4"></div>
+            <p class="text-stonebeige-800">Clear, direct explanations of MJV Masonry quoting policies, services, and travel parameters.</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <!-- FAQ 1 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(1)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-1" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you provide written quotes?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-1"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-1">
+                    MJV Masonry provides accurate quotes primarily by phone after photos have been shared. Site visits depend entirely on the project, and in some situations, site visit fees are charged depending on location and scale.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(2)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-2" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you need photos before quoting?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-2"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-2">
+                    Yes, photos are highly preferred before quoting. By seeing clear images of the damaged brickwork, foundation cracks, or porch steps, Marty can immediately assess structural degradation and provide a precise initial response.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(3)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-3" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you do site visits?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-3"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-3">
+                    Site visits are arranged depending on the scope of the project. Because we require a phone call and project photos first, Marty filters on-site evaluations for complex, structural, or large heritage undertakings. Site visit fees are sometimes applicable depending on location.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(4)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-4" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">What areas do you serve?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-4"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-4">
+                    Our regular service area includes Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, and Mississauga. Marty regularly travels up to about 1 hour. Larger projects located outside this boundary can be reviewed manually.
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(5)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-5" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you work on chimneys?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-5"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-5">
+                    Yes. Chimney repair and structural chimney rebuilds are primary specialties. We handle mortar tuckpointing, damaged block/brick extraction, crown flashing repairs, and complete chimney teardowns from roof level.
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(6)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-6" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you do brick and stone restoration?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-6"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-6">
+                    Absolutely. MJV specializes in masonry restoration, including complex heritage restorations. We are highly knowledgeable in using vintage-compatible lime mortar formulations to protect historic masonry networks from structural fractures.
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(7)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-7" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do weather conditions affect masonry work?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-7"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-7">
+                    Yes. Mortar compounds require temperatures above 4°C (40°F) to cure correctly. Severe rain or freezing winter weather directly restricts active mortar and brick applications. In off-seasons, we coordinate protective tarps or specialized heating systems if required.
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(8)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-8" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you offer a workmanship warranty?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-8"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-stonebeige-800 leading-relaxed bg-stonebeige-50/50" id="faq-content-8">
+                    Yes. MJV Masonry guarantees the structural stability and alignment of our craftsmanship under a standard workmanship warranty. Marty uses high-grade materials to ensure maximum structural lifespan.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer & Contact Section -->
+<footer id="contact" class="bg-charcoal-900 text-stonebeige-100 border-t-8 border-brickred-accent py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-charcoal-800 pb-12">
+            
+            <!-- Col 1: Business Credentials -->
+            <div class="md:col-span-5 space-y-4">
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white block">
+                    MJV Masonry and Contracting
+                </span>
+                <span class="block text-xs uppercase tracking-widest text-stonebeige-300 font-bold">
+                    Marty Vandenberg · Custom Craftsmanship
+                </span>
+                <p class="text-xs text-stonebeige-200 leading-relaxed max-w-sm">
+                    Bringing approximately 50 years of masonry trade experience to Hamilton, Oakville, and surrounding Ontario regions. Fully insured and safety certified.
+                </p>
+                <div class="flex gap-4 items-center">
+                    <span class="bg-brickred-accent/20 text-brickred-accent border border-brickred-accent/30 text-[10px] font-bold px-2 py-0.5 rounded uppercase">
+                        Google Business: [PENDING]
+                    </span>
+                    <span class="bg-brickred-accent/20 text-brickred-accent border border-brickred-accent/30 text-[10px] font-bold px-2 py-0.5 rounded uppercase">
+                        Facebook: [PENDING]
+                    </span>
+                </div>
+            </div>
+
+            <!-- Col 2: Direct Contact Coordinates -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="font-serif text-base font-bold text-white uppercase tracking-wider">Direct Contact</h4>
+                <div class="space-y-3 text-xs text-stonebeige-200">
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brickred-accent text-sm shrink-0"></i>
+                        <span>Direct Line: <a href="tel:2896821800" class="hover:text-white transition-colors underline font-bold">289-682-1800</a></span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brickred-accent text-sm shrink-0"></i>
+                        <span>Direct Email: <a href="mailto:mjvm60@gmail.com" class="hover:text-white transition-colors underline">mjvm60@gmail.com</a></span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i class="fa-solid fa-calendar text-brickred-accent text-sm shrink-0"></i>
+                        <span>Hours: Mon - Sat: Callback Scheduling | No Sunday Hours</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Col 3: Service Townships -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-serif text-base font-bold text-white uppercase tracking-wider">Our Territories</h4>
+                <p class="text-xs text-stonebeige-200 leading-relaxed">
+                    Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, Mississauga.
+                </p>
+                <span class="block text-[10px] text-brickred-accent font-semibold italic">
+                    *Out of region projects assessed on scale.
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Sub-footer Legal Bar -->
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-stonebeige-300">
+            <p>&copy; 2026 MJV Masonry and Contracting. Designed with Marty Vandenberg's trade guidelines. All rights reserved.</p>
+            <div class="flex gap-4">
+                <span class="hover:underline cursor-pointer">Privacy Notice</span>
+                <span class="hover:underline cursor-pointer">Workmanship Policies</span>
+                <span class="hover:underline cursor-pointer">Travel Terms</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navigation Toggle Logic
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+    }
+
+    // Interactive Service Checker Logic
+    const checkerInput = document.getElementById('checker-input');
+    const checkerBtn = document.getElementById('checker-btn');
+    const checkerFeedback = document.getElementById('checker-feedback');
+    const validTownships = ['hamilton', 'burlington', 'stoney creek', 'oakville', 'grimsby', 'dundas', 'mississauga'];
+
+    if (checkerBtn && checkerInput && checkerFeedback) {
+        checkerBtn.addEventListener('click', () => {
+            const userIn = checkerInput.value.trim().toLowerCase();
+            if (!userIn) {
+                checkerFeedback.className = 'mt-3 p-3 bg-red-100 text-red-800 text-xs font-semibold rounded border border-red-200';
+                checkerFeedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-1.5"></i> Please enter your municipality.';
+                checkerFeedback.classList.remove('hidden');
+                return;
+            }
+
+            const inService = validTownships.some(town => userIn.includes(town));
+            if (inService) {
+                checkerFeedback.className = 'mt-3 p-3 bg-green-100 text-green-800 text-xs font-semibold rounded border border-green-200';
+                checkerFeedback.innerHTML = '<i class="fa-solid fa-circle-check mr-1.5"></i> Address validated! You are within Marty\'s 1-hour travel window.';
+            } else {
+                checkerFeedback.className = 'mt-3 p-3 bg-amber-100 text-amber-800 text-xs font-semibold rounded border border-amber-200';
+                checkerFeedback.innerHTML = '<i class="fa-solid fa-circle-info mr-1.5"></i> Out-of-area detected. Lead requires manual review by Marty based on scale.';
+            }
+            checkerFeedback.classList.remove('hidden');
+        });
+    }
+
+    // Urgent Repairs Trigger logic
+    function setUrgentPriority() {
+        const quoteUrgency = document.getElementById('quote-urgency');
+        if (quoteUrgency) {
+            quoteUrgency.value = 'urgent';
+        }
+    }
+
+    // Photo selection visual helper
+    function handleFilePlaceholder(input) {
+        const fileCount = document.getElementById('file-count');
+        if (fileCount && input.files) {
+            fileCount.innerText = `${input.files.length} Photo file(s) matched for upload representation.`;
+            fileCount.classList.remove('hidden');
+        }
+    }
+
+    // Estimate form submit simulation
+    function handleQuoteSubmit(event) {
+        event.preventDefault();
+        const formContainer = document.getElementById('quote-form-container');
+        const successState = document.getElementById('quote-success');
+        if (formContainer && successState) {
+            formContainer.classList.add('hidden');
+            successState.classList.remove('hidden');
+        }
+    }
+
+    function resetQuoteForm() {
+        const form = document.getElementById('quote-form');
+        const formContainer = document.getElementById('quote-form-container');
+        const successState = document.getElementById('quote-success');
+        const fileCount = document.getElementById('file-count');
+        
+        if (form && formContainer && successState) {
+            form.reset();
+            if (fileCount) fileCount.classList.add('hidden');
+            successState.classList.add('hidden');
+            formContainer.classList.remove('hidden');
+        }
+    }
+
+    // Schedule Callback interaction logic
+    let activeDay = 3;
+    let activeTime = '';
+
+    function selectBookingDate(day) {
+        // clear old visual day selected
+        for (let i = 1; i <= 10; i++) {
+            const btn = document.getElementById(`btn-day-${i}`);
+            if (btn) {
+                btn.className = "p-2 text-xs font-bold rounded bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200";
+            }
+        }
+        const activeBtn = document.getElementById(`btn-day-${day}`);
+        if (activeBtn) {
+            activeBtn.className = "p-2 text-xs font-bold rounded bg-brickred-accent text-white shadow";
+        }
+        activeDay = day;
+        document.getElementById('summary-date').innerText = `July ${day}, 2026`;
+    }
+
+    function selectBookingTime(timeString) {
+        const morning = document.getElementById('slot-morning');
+        const afternoon = document.getElementById('slot-afternoon');
+        const evening = document.getElementById('slot-evening');
+        
+        [morning, afternoon, evening].forEach(slot => {
+            if (slot) slot.className = "px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900";
+        });
+
+        if (timeString.includes('Morning')) {
+            morning.className = "px-3 py-2 text-xs font-bold rounded bg-brickred-accent text-white border-brickred-accent shadow-inner";
+        } else if (timeString.includes('Afternoon')) {
+            afternoon.className = "px-3 py-2 text-xs font-bold rounded bg-brickred-accent text-white border-brickred-accent shadow-inner";
+        } else if (timeString.includes('Evening')) {
+            evening.className = "px-3 py-2 text-xs font-bold rounded bg-brickred-accent text-white border-brickred-accent shadow-inner";
+        }
+
+        activeTime = timeString;
+        document.getElementById('summary-time').innerText = timeString;
+    }
+
+    function submitBooking() {
+        const phoneInput = document.getElementById('booking-phone');
+        const summaryText = document.getElementById('summary-time');
+        
+        if (!activeTime) {
+            summaryText.className = "font-bold text-red-600 text-xs";
+            summaryText.innerText = "Please select Callback Slot";
+            setTimeout(() => {
+                summaryText.className = "font-bold text-charcoal-900";
+                summaryText.innerText = "None Selected";
+            }, 1200);
+            return;
+        }
+
+        if (!phoneInput || !phoneInput.value.trim()) {
+            phoneInput.classList.add('border-red-500');
+            return;
+        }
+        phoneInput.classList.remove('border-red-500');
+
+        document.getElementById('success-date-str').innerText = `July ${activeDay}, 2026`;
+        document.getElementById('success-time-str').innerText = activeTime;
+
+        document.getElementById('booking-form-container').classList.add('hidden');
+        document.getElementById('booking-success').classList.remove('hidden');
+    }
+
+    function resetBooking() {
+        document.getElementById('booking-phone').value = '';
+        activeTime = '';
+        document.getElementById('summary-time').innerText = "None Selected";
+        
+        const morning = document.getElementById('slot-morning');
+        const afternoon = document.getElementById('slot-afternoon');
+        const evening = document.getElementById('slot-evening');
+        [morning, afternoon, evening].forEach(slot => {
+            if (slot) slot.className = "px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900";
+        });
+
+        document.getElementById('booking-success').classList.add('hidden');
+        document.getElementById('booking-form-container').classList.remove('hidden');
+    }
+
+    // FAQ Accordion Toggle Utility
+    function toggleFaq(num) {
+        const content = document.getElementById(`faq-content-${num}`);
+        const icon = document.getElementById(`faq-icon-${num}`);
+        const isClosed = content.classList.contains('hidden');
+
+        // close all
+        for (let i = 1; i <= 8; i++) {
+            const otherContent = document.getElementById(`faq-content-${i}`);
+            const otherIcon = document.getElementById(`faq-icon-${i}`);
+            if (otherContent) otherContent.classList.add('hidden');
+            if (otherIcon) otherIcon.className = "fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200";
+        }
+
+        if (isClosed) {
+            content.classList.remove('hidden');
+            icon.className = "fa-solid fa-chevron-up text-brickred-accent transition-transform duration-200";
+        }
+    }
+</script>
 </body>
 </html>
