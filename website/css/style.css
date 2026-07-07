@@ -245,11 +245,10 @@ a {
   gap: 1.5rem;
   align-items: start;
   padding: clamp(1.25rem, 2vw, 2rem);
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 2rem;
-  background: rgba(19, 14, 12, 0.22);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 24px 60px rgba(8, 6, 4, 0.28);
+  background: #000;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
 }
 
 .hero-copy {
@@ -270,6 +269,10 @@ a {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.hero-copy .eyebrow {
+  color: #fff;
 }
 
 .hero-copy h1 {
@@ -378,7 +381,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #a73a24;
+  color: #000;
 }
 
 .hero-form-card h2 {
@@ -705,7 +708,14 @@ a {
 }
 
 .hero-actions .btn-primary {
-  border-color: var(--white);
+  background: #a73a24;
+  border-color: #a73a24;
+  color: #fff;
+}
+
+.hero-actions .btn-primary:hover:not(:disabled) {
+  background: #7f1d1d;
+  border-color: #7f1d1d;
 }
 
 .btn-secondary {
