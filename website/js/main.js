@@ -79,3 +79,25 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+const heroScene = document.querySelector('.hero-scene');
+if (heroScene && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  let ticking = false;
+
+  const updateHeroParallax = () => {
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const offset = Math.min(scrollTop * 0.06, 18);
+    heroScene.style.setProperty('--hero-shift', `${offset}px`);
+    ticking = false;
+  };
+
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeroParallax);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  updateHeroParallax();
+}

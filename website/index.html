@@ -46,8 +46,8 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Custom smooth scroll behaviour */
         html {
             scroll-behavior: smooth;
         }
@@ -138,87 +138,55 @@
 </header>
 
 <!-- Hero Section -->
-<section class="relative bg-stonebeige-100 text-charcoal-900 py-16 lg:py-24 overflow-hidden border-b border-stonebeige-200">
-    <!-- Texture overlay -->
-    <div class="absolute inset-0 opacity-5 pointer-events-none">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="brick-hero" width="60" height="30" patternUnits="userSpaceOnUse">
-                    <rect width="60" height="30" fill="none" stroke="#000000" stroke-width="1" />
-                    <line x1="30" y1="0" x2="30" y2="15" stroke="#000000" stroke-width="1" />
-                    <line x1="0" y1="15" x2="60" y2="15" stroke="#000000" stroke-width="1" />
-                    <line x1="15" y1="15" x2="15" y2="30" stroke="#000000" stroke-width="1" />
-                    <line x1="45" y1="15" x2="45" y2="30" stroke="#000000" stroke-width="1" />
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#brick-hero)" />
-        </svg>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Hero Copy -->
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center gap-2 bg-stonebeige-200 text-stonebeige-900 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-stonebeige-300">
-                    <i class="fa-solid fa-hammer"></i> 50 Years of Masonry Heritage
+<section class="hero-scene" aria-label="MJV masonry hero background">
+    <div class="hero-shell">
+        <div class="hero-card">
+            <div class="hero-copy">
+                <p class="eyebrow"><i class="fa-solid fa-hammer"></i> Heritage masonry • trusted local craft</p>
+                <h1>Stone and brickwork that stands the test of time.</h1>
+                <p class="hero-subtitle">Marty Vandenberg brings decades of hands-on masonry expertise to heritage repairs, structural restoration, and premium stonework across Hamilton and Oakville.</p>
+                <div class="hero-metrics" aria-label="Company highlights">
+                    <span class="metric-pill"><i class="fa-solid fa-award"></i> 50 years of trade experience</span>
+                    <span class="metric-pill"><i class="fa-solid fa-shield-halved"></i> Fully insured and safety focused</span>
+                    <span class="metric-pill"><i class="fa-solid fa-location-dot"></i> Serving the local region directly</span>
                 </div>
-                <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-charcoal-900 leading-tight">
-                    Traditional Masonry Repairs Built to Last Generations
-                </h1>
-                <p class="text-base sm:text-lg text-stonebeige-800 max-w-xl leading-relaxed">
-                    Marty Vandenberg of <strong class="text-charcoal-900">MJV Masonry and Contracting</strong> brings a half-century of trade expertise to every restoration, brick repair, and stonework project in the Hamilton and Oakville regions. No shortcuts, just real craftsmanship.
-                </p>
-
-                <!-- Action Blocks -->
-                <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                    <a href="#quote-section" class="inline-flex justify-center items-center bg-brickred-accent hover:bg-brickred-900 text-white font-medium text-base px-6 py-3.5 rounded shadow-lg transition-all duration-150">
-                        <i class="fa-solid fa-file-contract mr-2 text-stonebeige-200"></i> Request a Quote
-                    </a>
-                    <a href="#booking-section" class="inline-flex justify-center items-center bg-white hover:bg-stonebeige-100 text-charcoal-900 border border-stonebeige-300 font-medium text-base px-6 py-3.5 rounded shadow-sm transition-all duration-150">
-                        <i class="fa-solid fa-calendar-check mr-2 text-brickred-accent"></i> Book Consultation Info
-                    </a>
+                <div class="hero-actions">
+                    <a href="#quote-section" class="btn-primary">Request a Quote</a>
+                    <a href="#booking-section" class="btn-secondary">Book a Consultation</a>
                 </div>
-
-                <!-- Live Quick Call-out -->
-                <p class="text-xs text-stonebeige-800 flex items-center gap-2 pt-2">
-                    <span class="inline-block w-2.5 h-2.5 bg-green-600 rounded-full animate-pulse"></span>
-                    <span>Direct line: Call Marty at <a href="tel:2896821800" class="font-bold underline text-charcoal-900 hover:text-brickred-accent">289-682-1800</a></span>
-                </p>
+                <p class="hero-note"><span class="hero-dot"></span> Direct line: <a href="tel:2896821800">289-682-1800</a></p>
             </div>
 
-            <!-- Hero Image Block with Craftsmanship Placeholder -->
-            <div class="lg:col-span-5">
-                <div class="bg-white p-3.5 rounded-xl border border-stonebeige-200 shadow-xl">
-                    <div class="relative rounded-lg overflow-hidden bg-stonebeige-100 aspect-[4/3] flex items-center justify-center text-center p-6">
-                        <!-- Custom decorative pattern simulating masonry tools -->
-                        <div class="absolute inset-0 opacity-10 pointer-events-none">
-                            <i class="fa-solid fa-trowel text-9xl absolute -bottom-10 -right-10 transform rotate-12"></i>
-                        </div>
-                        <div class="space-y-4 relative z-10">
-                            <div class="w-16 h-16 bg-stonebeige-200 text-brickred-accent rounded-full flex items-center justify-center mx-auto border border-stonebeige-300">
-                                <i class="fa-solid fa-trowel text-2xl"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs uppercase tracking-widest text-stonebeige-800 font-bold mb-1">IMAGE PLACEHOLDER</span>
-                                <h3 class="font-serif font-bold text-lg text-charcoal-900">[PENDING MARTY PHOTO SELECTION]</h3>
-                                <p class="text-xs text-stonebeige-800 max-w-xs mx-auto mt-2 italic">
-                                    "A perfect close-up photo showing neat, struck mortar joints, solid red clay bricks, or a heritage chimney rebuild."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-3 flex items-center justify-between text-xs text-stonebeige-800 px-1">
-                        <span><i class="fa-solid fa-shield-halved mr-1 text-brickred-accent"></i> Fully Insured Business</span>
-                        <span><i class="fa-solid fa-circle-check mr-1 text-brickred-accent"></i> Safety Trained</span>
-                    </div>
-                </div>
+            <div class="hero-form-card" id="quote-section">
+                <p class="form-kicker">Quote request</p>
+                <h2>Start with a project brief.</h2>
+                <form class="hero-form" onsubmit="event.preventDefault(); document.getElementById('quote-section').scrollIntoView({behavior:'smooth', block:'start'});">
+                    <label>
+                        <span>Your name</span>
+                        <input type="text" placeholder="Marty Vandenberg" required>
+                    </label>
+                    <label>
+                        <span>Phone</span>
+                        <input type="tel" placeholder="289-682-1800" required>
+                    </label>
+                    <label>
+                        <span>Project type</span>
+                        <select>
+                            <option>Brick repair</option>
+                            <option>Stonework</option>
+                            <option>Chimney rebuild</option>
+                            <option>Heritage restoration</option>
+                            <option>Retaining wall</option>
+                        </select>
+                    </label>
+                    <button type="submit">Request a callback</button>
+                </form>
             </div>
-
         </div>
     </div>
 </section>
 
+<div class="site-content-shell">
 <!-- Trust & Experience Section -->
 <section class="bg-white py-12 border-b border-stonebeige-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1182,6 +1150,8 @@
             </div>
         </div>
     </div>
+</div>
+
 </footer>
 
 <script>
