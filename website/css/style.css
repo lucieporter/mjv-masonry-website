@@ -59,6 +59,16 @@ body {
   isolation: isolate;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-serif {
+  font-family: Arial, sans-serif !important;
+}
+
 body > *:not(.site-fixed-background) {
   position: relative;
   z-index: 1;
@@ -279,6 +289,7 @@ a {
   margin: 0 0 0.9rem;
   font-family: 'Lora', serif;
   font-size: clamp(2.1rem, 3.7vw, 3.4rem);
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
