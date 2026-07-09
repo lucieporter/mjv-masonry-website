@@ -69,12 +69,6 @@
                 <a href="mailto:mjvm60@gmail.com" class="hover:underline">mjvm60@gmail.com</a>
             </span>
         </div>
-        <div class="flex items-center gap-2">
-            <span class="bg-brickred-accent text-[10px] text-white font-bold px-2 py-0.5 rounded tracking-wide uppercase">
-                Prototype View
-            </span>
-            <span class="text-stonebeige-300">Some components marked with [PENDING MARTY CONFIRMATION]</span>
-        </div>
     </div>
 </div>
 
@@ -600,20 +594,6 @@
                     *Note: Travel fees may sometimes apply depending on total commute and overall job scale.
                 </p>
 
-                <!-- Interactive Travel Checker UI (Real Input Logic) -->
-                <div class="bg-stonebeige-50 border border-stonebeige-200 rounded-lg p-5 mt-4">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1">
-                        Quick Service Radius Check
-                    </h4>
-                    <p class="text-xs text-stonebeige-800 mb-3">Enter your Ontario city or township to verify availability.</p>
-                    <div class="flex flex-col sm:flex-row gap-2">
-                        <input type="text" id="checker-input" placeholder="e.g. Grimsby, Oakville" class="flex-1 px-3 py-2.5 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
-                        <button id="checker-btn" class="bg-brickred-accent hover:bg-brickred-900 text-white font-bold text-xs px-5 py-2.5 rounded transition-all duration-150">
-                            Verify Area
-                        </button>
-                    </div>
-                    <div id="checker-feedback" class="mt-3 text-xs font-semibold hidden"></div>
-                </div>
             </div>
 
             <!-- Interactive travel representation layout -->
@@ -1109,14 +1089,6 @@
                 <p class="text-xs text-stonebeige-200 leading-relaxed max-w-sm">
                     Bringing approximately 50 years of masonry trade experience to Hamilton, Oakville, and surrounding Ontario regions. Fully insured and safety certified.
                 </p>
-                <div class="flex gap-4 items-center">
-                    <span class="bg-brickred-accent/20 text-brickred-accent border border-brickred-accent/30 text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                        Google Business: [PENDING]
-                    </span>
-                    <span class="bg-brickred-accent/20 text-brickred-accent border border-brickred-accent/30 text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                        Facebook: [PENDING]
-                    </span>
-                </div>
             </div>
 
             <!-- Col 2: Direct Contact Coordinates -->
@@ -1178,34 +1150,6 @@
             } else {
                 icon.className = 'fa-solid fa-xmark text-2xl';
             }
-        });
-    }
-
-    // Interactive Service Checker Logic
-    const checkerInput = document.getElementById('checker-input');
-    const checkerBtn = document.getElementById('checker-btn');
-    const checkerFeedback = document.getElementById('checker-feedback');
-    const validTownships = ['hamilton', 'burlington', 'stoney creek', 'oakville', 'grimsby', 'dundas', 'mississauga'];
-
-    if (checkerBtn && checkerInput && checkerFeedback) {
-        checkerBtn.addEventListener('click', () => {
-            const userIn = checkerInput.value.trim().toLowerCase();
-            if (!userIn) {
-                checkerFeedback.className = 'mt-3 p-3 bg-red-100 text-red-800 text-xs font-semibold rounded border border-red-200';
-                checkerFeedback.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-1.5"></i> Please enter your municipality.';
-                checkerFeedback.classList.remove('hidden');
-                return;
-            }
-
-            const inService = validTownships.some(town => userIn.includes(town));
-            if (inService) {
-                checkerFeedback.className = 'mt-3 p-3 bg-green-100 text-green-800 text-xs font-semibold rounded border border-green-200';
-                checkerFeedback.innerHTML = '<i class="fa-solid fa-circle-check mr-1.5"></i> Address validated! You are within Marty\'s 1-hour travel window.';
-            } else {
-                checkerFeedback.className = 'mt-3 p-3 bg-amber-100 text-amber-800 text-xs font-semibold rounded border border-amber-200';
-                checkerFeedback.innerHTML = '<i class="fa-solid fa-circle-info mr-1.5"></i> Out-of-area detected. Lead requires manual review by Marty based on scale.';
-            }
-            checkerFeedback.classList.remove('hidden');
         });
     }
 
