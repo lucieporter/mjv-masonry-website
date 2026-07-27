@@ -158,7 +158,7 @@
             <div class="hero-form-card" id="quote-section">
                 <p class="form-kicker">Quote request</p>
                 <h2>Start with a project brief.</h2>
-                <form class="hero-form" onsubmit="event.preventDefault(); document.getElementById('quote-section').scrollIntoView({behavior:'smooth', block:'start'});">
+                <form class="hero-form" onsubmit="event.preventDefault(); document.getElementById('describe-project-section').scrollIntoView({behavior:'smooth', block:'start'});">
                     <label>
                         <span>Your name</span>
                         <input type="text" placeholder="Marty Vandenberg" required>
@@ -661,7 +661,7 @@
         </div>
 
         <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="#quote-section" onclick="setUrgentPriority()" class="w-full sm:w-auto inline-flex justify-center items-center bg-black hover:bg-charcoal-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded shadow">
+            <a href="#describe-project-section" onclick="setUrgentPriority()" class="w-full sm:w-auto inline-flex justify-center items-center bg-black hover:bg-charcoal-800 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded shadow">
                 Flag High-Priority Review
             </a>
             <span class="text-xs text-black font-medium">Or direct call: <a href="tel:2896821800" class="underline font-bold">289-682-1800</a></span>
@@ -670,7 +670,7 @@
 </section>
 
 <!-- Request a Quote Section -->
-<section id="quote-section" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
+<section id="describe-project-section" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-2xl shadow-md border border-stonebeige-200 overflow-hidden">
             
