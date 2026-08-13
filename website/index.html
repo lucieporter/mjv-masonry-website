@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MJV Masonry and Contracting | Marty Vandenberg</title>
+    <meta name="description" content="Experienced brick, stone, chimney and masonry repair and restoration serving Hamilton, Burlington, Oakville and surrounding MJV service areas. Request a quote online.">
+    <link rel="canonical" href="https://www.mjvmasonrycontracting.com/">
+    <title>MJV Masonry &amp; Contracting | Masonry Repair &amp; Restoration</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.mjvmasonrycontracting.com/#business",
+  "name": "MJV Masonry & Contracting",
+  "url": "https://www.mjvmasonrycontracting.com/",
+  "telephone": "+1-289-682-1800",
+  "email": "info@mjvmasonrycontracting.com",
+  "areaServed": [
+    {"@type": "City", "name": "Hamilton, Ontario"},
+    {"@type": "City", "name": "Burlington, Ontario"},
+    {"@type": "City", "name": "Stoney Creek, Ontario"},
+    {"@type": "City", "name": "Oakville, Ontario"},
+    {"@type": "City", "name": "Grimsby, Ontario"},
+    {"@type": "City", "name": "Dundas, Ontario"},
+    {"@type": "City", "name": "Mississauga, Ontario"},
+    {"@type": "City", "name": "Brantford, Ontario"}
+  ]
+}
+</script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for structural and masonry icons -->
@@ -66,7 +89,7 @@
             </span>
             <span class="hidden md:inline-flex items-center gap-1.5">
                 <i class="fa-solid fa-envelope text-brickred-accent"></i>
-                <a href="mailto:contact@mjvmasonrycontracting.com" class="hover:underline">contact@mjvmasonrycontracting.com</a>
+                <a href="mailto:info@mjvmasonrycontracting.com" class="hover:underline">info@mjvmasonrycontracting.com</a>
             </span>
         </div>
     </div>
@@ -150,7 +173,7 @@
                 </div>
                 <div class="hero-actions">
                     <a href="#quote-form" class="btn-primary">Request a Quote</a>
-                    <a href="#booking-section" class="btn-secondary">Schedule a Call</a>
+                    <a href="#quote-form" class="btn-secondary">Start Quote Form</a>
                 </div>
                 <p class="hero-note"><span class="hero-dot"></span> Direct line: <a href="tel:2896821800">289-682-1800</a></p>
             </div>
@@ -711,7 +734,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="sm:col-span-2">
                             <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">Email Address</label>
-                            <input type="email" id="quote-email" placeholder="e.g. contact@mjvmasonrycontracting.com" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
+                            <input type="email" id="quote-email" placeholder="e.g. info@mjvmasonrycontracting.com" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-charcoal-900 uppercase mb-1.5">City / Township *</label>
@@ -826,106 +849,6 @@
     </div>
 </section>
 
-<!-- Book a Call / Site Visit Section -->
-<section id="booking-section" class="py-20 bg-white border-b border-stonebeige-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-stonebeige-100 rounded-2xl shadow-sm border border-stonebeige-200 overflow-hidden">
-            
-            <div class="p-6 sm:p-8 bg-charcoal-900 text-white border-b border-charcoal-800 flex justify-between items-start gap-4">
-                <div>
-                    <h3 class="font-serif text-xl sm:text-2xl font-bold">Schedule Call / Visit Window</h3>
-                    <p class="text-xs text-stonebeige-300 mt-1">Review possible callback windows, then submit the quote form first.</p>
-                </div>
-            </div>
-
-            <!-- Interactive Calendar Grid layout -->
-            <div class="p-6 sm:p-8 space-y-6" id="booking-form-container">
-                <div class="p-4 bg-white border border-stonebeige-200 rounded text-xs text-stonebeige-800 leading-relaxed">
-                    <p class="font-bold text-charcoal-900 mb-1 flex items-center gap-1.5">
-                        <i class="fa-solid fa-file-signature text-brickred-accent"></i> Quote Request First:
-                    </p>
-                    To ensure we understand your project and determine whether photos, a phone consultation, or a site visit are required, please submit the Quote Request Form first. After Marty reviews your information, you will receive a booking link when appropriate.
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                    <!-- Day Picker -->
-                    <div class="md:col-span-7">
-                        <span class="block text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-3">Select Consultation Date:</span>
-                        <div class="flex flex-col sm:flex-row sm:items-end gap-3 mb-3">
-                            <div class="flex-1">
-                                <label for="booking-month" class="block text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1.5">Month:</label>
-                                <select id="booking-month" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white" onchange="handleCalendarPeriodChange()"></select>
-                            </div>
-                            <div class="flex-1">
-                                <label for="booking-year" class="block text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1.5">Year:</label>
-                                <select id="booking-year" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white" onchange="handleCalendarPeriodChange()"></select>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-7 text-center text-[10px] font-bold text-stonebeige-800 mb-2 uppercase tracking-widest">
-                            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
-                        </div>
-                        <div class="grid grid-cols-7 gap-1.5 text-center" id="calendar-grid"></div>
-                        <span class="block text-[10px] text-stonebeige-800 italic mt-3 text-right">Sundays and past dates are unavailable.</span>
-                    </div>
-
-                    <!-- Time Slots / Booking Panel -->
-                    <div class="md:col-span-5 flex flex-col justify-between space-y-4">
-                        <div>
-                            <span class="block text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-3">Available Callback Slots:</span>
-                            <div class="grid grid-cols-1 gap-2" id="time-slots-panel">
-                                <button type="button" onclick="selectBookingTime('Morning (8:00 AM - 12:00 PM)')" class="px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900" id="slot-morning">Morning Callback</button>
-                                <button type="button" onclick="selectBookingTime('Afternoon (12:00 PM - 5:00 PM)')" class="px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900" id="slot-afternoon">Afternoon Callback</button>
-                                <button type="button" onclick="selectBookingTime('Evening (5:00 PM - 8:00 PM)')" class="px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900" id="slot-evening">Evening Callback</button>
-                            </div>
-                        </div>
-
-                        <!-- Summary Block -->
-                        <div class="pt-4 border-t border-stonebeige-300 space-y-3">
-                            <div class="grid grid-cols-2 gap-2 text-xs">
-                                <div>
-                                    <span class="block text-stonebeige-800">Target Date:</span>
-                                    <span class="font-bold text-charcoal-900" id="summary-date">July 3, 2026</span>
-                                </div>
-                                <div>
-                                    <span class="block text-stonebeige-800">Slot Window:</span>
-                                    <span class="font-bold text-charcoal-900" id="summary-time">None Selected</span>
-                                </div>
-                            </div>
-                            <input type="tel" id="booking-phone" placeholder="Enter Phone Number *" class="w-full px-3 py-2 text-xs rounded border border-stonebeige-200 focus:outline-none focus:ring-1 focus:ring-brickred-accent bg-white">
-                            
-                            <div class="pt-2">
-                                <span class="text-[9px] text-brickred-accent font-bold uppercase text-center block mb-1">
-                                    Quote request required before booking
-                                </span>
-                                <a href="#quote-form" class="w-full inline-flex justify-center items-center bg-black hover:bg-charcoal-800 text-white text-xs font-bold py-2.5 rounded shadow">
-                                    Request a Quote First
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Booking Success Pane -->
-            <div id="booking-success" class="p-8 text-center space-y-6 hidden">
-                <div class="w-16 h-16 bg-green-100 text-green-800 rounded-full mx-auto flex items-center justify-center border-2 border-green-300">
-                    <i class="fa-solid fa-calendar-check text-2xl animate-bounce"></i>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-serif text-2xl font-bold text-charcoal-900">Appointment Call Blocked!</h3>
-                    <p class="text-xs text-stonebeige-800">
-                        MJV Masonry calendar will reserve <strong id="success-date-str">July 3</strong> during <strong id="success-time-str">Morning</strong> window. Marty will follow up to finalize the address detail.
-                    </p>
-                </div>
-                <button onclick="resetBooking()" class="text-xs font-bold text-brickred-accent hover:underline">
-                    Reset Calendar Slot
-                </button>
-            </div>
-
-        </div>
-    </div>
-</section>
-
 <!-- About Section -->
 <section id="about" class="py-20 bg-charcoal-900 text-white border-b border-charcoal-800 relative">
     <div class="absolute inset-0 opacity-5 pointer-events-none">
@@ -987,105 +910,136 @@
 </section>
 
 <!-- FAQ Section -->
-<section id="faq" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200">
+<section id="faq" class="py-20 bg-stonebeige-100 border-b border-stonebeige-200" aria-labelledby="faq-heading">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-16">
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Masonry & Repair FAQs</h2>
+            <h2 id="faq-heading" class="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900">Frequently Asked Questions</h2>
             <div class="w-16 h-1 bg-brickred-accent mx-auto mt-4 mb-4"></div>
-            <p class="text-black">Clear, direct explanations of MJV Masonry quoting policies, services, and travel parameters.</p>
+            <p class="text-black">Clear, direct answers about MJV Masonry services, quote requests, service areas and project expectations.</p>
         </div>
 
         <div class="space-y-4">
-            
             <!-- FAQ 1 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(1)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-1" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you provide written quotes?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">What masonry services does MJV Masonry & Contracting provide?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-1"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-1">
-                    MJV Masonry provides accurate quotes after photos have been shared. Site visits depend entirely on the project, and in some situations, site visit fees may be charged depending on location and scale.
+                    MJV Masonry & Contracting provides brick repair and repointing, chimney repair and rebuilds, natural and manufactured stonework, masonry restoration and heritage work, foundation repair and parging, concrete block work, steps, porches, walkways, retaining walls, fireplaces, outdoor kitchens, water-damage repair and custom masonry work.
                 </div>
             </div>
-
             <!-- FAQ 2 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(2)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-2" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you need photos before quoting?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">What areas does MJV Masonry & Contracting serve?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-2"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-2">
-                    Yes, photos are highly preferred before quoting. By seeing clear images of the damaged brickwork, foundation cracks, or porch steps. Photos of the immediate surrounding area and the location on the property are also needed for accuracy on the quote. Marty can assess structural degradation and provide a precise initial response.
+                    MJV serves Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, Mississauga and Brantford, Ontario. Projects outside the regular service area may be considered depending on the work.
                 </div>
             </div>
-
             <!-- FAQ 3 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(3)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-3" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you do site visits?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">How do I request a quote?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-3"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-3">
-                    Site visits are arranged depending on the scope of the project. Because we require a phone call and project photos first, Marty filters on-site evaluations for complex, structural, or large heritage undertakings. Site visit fees are sometimes applicable, generally for locations outside of the regular service area.
+                    Complete the MJV Request a Quote Form with your contact information, project location, project description and photos if available. Marty reviews the information before MJV follows up about pricing or next steps.
                 </div>
             </div>
-
             <!-- FAQ 4 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(4)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-4" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">What areas do you serve?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you need photos before providing a quote?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-4"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-4">
-                    Our regular service area includes Hamilton, Burlington, Stoney Creek, Oakville, Grimsby, Dundas, Mississauga, and Brantford. Marty regularly travels up to about 1 hour. Larger projects located outside this boundary can be reviewed manually.
+                    Photos are preferred because they help Marty understand the condition and scope of the project before discussing pricing or next steps. Some projects may still require a site visit.
                 </div>
             </div>
-
             <!-- FAQ 5 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(5)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-5" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you work on chimneys?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">How do I arrange a consultation or site visit?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-5"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-5">
-                    Yes. Chimney repair and structural chimney rebuilds are primary specialties. We handle mortar tuckpointing, damaged block/brick extraction, crown flashing repairs, and complete chimney teardowns from roof level.
+                    Start by submitting the MJV Request a Quote Form. Marty reviews the project information first. If a consultation or site visit is appropriate, MJV will contact you to arrange the next step. MJV does not offer public instant calendar booking.
                 </div>
             </div>
-
             <!-- FAQ 6 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(6)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-6" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you do brick and stone restoration?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you handle small masonry repairs?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-6"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-6">
-                    Absolutely. MJV specializes in masonry restoration, including complex heritage restorations. We are highly knowledgeable in using vintage-compatible lime mortar formulations to protect historic masonry networks from structural fractures.
+                    Yes. MJV handles small and medium masonry repairs as well as larger restoration, chimney, stonework and custom masonry projects.
                 </div>
             </div>
-
             <!-- FAQ 7 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(7)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-7" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do weather conditions affect masonry work?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you handle urgent masonry concerns?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-7"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-7">
-                    Yes. Mortar compounds require temperatures above 4°C (40°F) to cure correctly. Severe rain or freezing winter weather directly restricts active mortar and brick applications. In off-seasons, we coordinate protective tarps or specialized heating systems if required.
+                    Urgent or safety-related masonry concerns can be identified in the Quote Form and are reviewed as a priority. Emergency service is not guaranteed.
                 </div>
             </div>
-
             <!-- FAQ 8 -->
             <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
                 <button onclick="toggleFaq(8)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-8" aria-expanded="false">
-                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you offer a workmanship warranty?</span>
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you repair and rebuild chimneys?</span>
                     <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-8"></i>
                 </button>
                 <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-8">
-                    Yes. MJV Masonry guarantees the structural stability and alignment of our craftsmanship under a standard workmanship warranty. Marty uses high-grade materials to ensure maximum structural lifespan.
+                    Yes. MJV provides chimney repair and rebuild services, including brick and mortar repair and larger rebuild work where appropriate.
                 </div>
             </div>
-
+            <!-- FAQ 9 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(9)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-9" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you work on heritage masonry?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-9"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-9">
+                    Yes. MJV provides masonry restoration and heritage work. The appropriate repair approach depends on the existing materials and condition of the property.
+                </div>
+            </div>
+            <!-- FAQ 10 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(10)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-10" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do weather conditions affect masonry work?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-10"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-10">
+                    Yes. Weather and temperature can affect whether masonry work can be completed properly and safely. Scheduling may need to change when conditions are unsuitable.
+                </div>
+            </div>
+            <!-- FAQ 11 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(11)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-11" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">Do you offer a workmanship guarantee?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-11"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-11">
+                    Yes. MJV's confirmed business information states that workmanship is guaranteed. Project-specific terms should be confirmed in the written quote or agreement.
+                </div>
+            </div>
+            <!-- FAQ 12 -->
+            <div class="border border-stonebeige-200 rounded-xl overflow-hidden bg-white shadow-sm transition-colors">
+                <button onclick="toggleFaq(12)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none" id="faq-btn-12" aria-expanded="false">
+                    <span class="font-serif font-bold text-base sm:text-lg text-charcoal-900 pr-4">How long are MJV quotes valid?</span>
+                    <i class="fa-solid fa-chevron-down text-stonebeige-800 transition-transform duration-200" id="faq-icon-12"></i>
+                </button>
+                <div class="hidden p-6 pt-0 border-t border-stonebeige-100 text-xs sm:text-sm text-black leading-relaxed bg-stonebeige-50/50" id="faq-content-12">
+                    MJV's confirmed business information states that quotes are valid for three months unless the written quote says otherwise.
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1123,11 +1077,11 @@
                     </p>
                     <p class="flex items-center gap-3">
                         <i class="fa-solid fa-envelope text-brickred-accent text-sm shrink-0"></i>
-                        <span>Direct Email: <a href="mailto:contact@mjvmasonrycontracting.com" class="hover:text-white transition-colors underline">contact@mjvmasonrycontracting.com</a></span>
+                        <span>Direct Email: <a href="mailto:info@mjvmasonrycontracting.com" class="hover:text-white transition-colors underline">info@mjvmasonrycontracting.com</a></span>
                     </p>
                     <p class="flex items-center gap-3">
                         <i class="fa-solid fa-calendar text-brickred-accent text-sm shrink-0"></i>
-                        <span>Hours: Mon - Sat: Callback Scheduling | No Sunday Hours</span>
+                        <span>Hours: Mon - Sat: Callback by quote request | No Sunday Hours</span>
                     </p>
                 </div>
             </div>
@@ -1229,185 +1183,14 @@
         }
     }
 
-    // Schedule Callback interaction logic
-    const monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-    ];
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    let activeDay = null;
-    let activeMonth = today.getMonth();
-    let activeYear = today.getFullYear();
-    let activeTime = '';
-
-    function findFirstAvailableDate(month, year) {
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-        for (let day = 1; day <= daysInMonth; day++) {
-            const date = new Date(year, month, day);
-            if (date >= today && date.getDay() !== 0) {
-                return day;
-            }
-        }
-        return null;
-    }
-
-    function initializeBookingCalendar() {
-        const monthSelect = document.getElementById('booking-month');
-        const yearSelect = document.getElementById('booking-year');
-        if (!monthSelect || !yearSelect) return;
-
-        monthSelect.innerHTML = monthNames.map((month, index) =>
-            `<option value="${index}">${month}</option>`
-        ).join('');
-
-        const startYear = today.getFullYear();
-        const availableYears = [startYear, startYear + 1];
-        yearSelect.innerHTML = availableYears.map(year =>
-            `<option value="${year}">${year}</option>`
-        ).join('');
-
-        activeDay = findFirstAvailableDate(activeMonth, activeYear);
-        monthSelect.value = String(activeMonth);
-        yearSelect.value = String(activeYear);
-        renderBookingCalendar();
-        updateBookingDateSummary();
-    }
-
-    function handleCalendarPeriodChange() {
-        activeMonth = Number(document.getElementById('booking-month').value);
-        activeYear = Number(document.getElementById('booking-year').value);
-        activeDay = findFirstAvailableDate(activeMonth, activeYear);
-        renderBookingCalendar();
-        updateBookingDateSummary();
-    }
-
-    function renderBookingCalendar() {
-        const calendarGrid = document.getElementById('calendar-grid');
-        if (!calendarGrid) return;
-
-        const firstDay = new Date(activeYear, activeMonth, 1).getDay();
-        const daysInMonth = new Date(activeYear, activeMonth + 1, 0).getDate();
-        const previousMonthDays = new Date(activeYear, activeMonth, 0).getDate();
-        const cells = [];
-
-        for (let i = firstDay - 1; i >= 0; i--) {
-            cells.push(`<span class="p-2 text-xs text-stonebeige-300">${previousMonthDays - i}</span>`);
-        }
-
-        for (let day = 1; day <= daysInMonth; day++) {
-            const date = new Date(activeYear, activeMonth, day);
-            const isSunday = date.getDay() === 0;
-            const isPast = date < today;
-            const isSelected = day === activeDay;
-
-            if (isSunday || isPast) {
-                cells.push(`<span class="p-2 text-xs text-stonebeige-300 font-bold">${day}</span>`);
-            } else {
-                const selectedClass = isSelected
-                    ? 'bg-brickred-accent text-white shadow'
-                    : 'bg-white hover:bg-stonebeige-200 text-charcoal-900 shadow-sm border border-stonebeige-200';
-                cells.push(`<button type="button" onclick="selectBookingDate(${day})" class="p-2 text-xs font-bold rounded ${selectedClass}" id="btn-day-${day}">${day}</button>`);
-            }
-        }
-
-        const trailingCells = (7 - (cells.length % 7)) % 7;
-        for (let day = 1; day <= trailingCells; day++) {
-            cells.push(`<span class="p-2 text-xs text-stonebeige-300">${day}</span>`);
-        }
-
-        calendarGrid.innerHTML = cells.join('');
-    }
-
-    function updateBookingDateSummary() {
-        const summaryDate = document.getElementById('summary-date');
-        if (!summaryDate) return;
-
-        summaryDate.innerText = activeDay
-            ? `${monthNames[activeMonth]} ${activeDay}, ${activeYear}`
-            : 'Select a date';
-    }
-
-    function selectBookingDate(day) {
-        activeDay = day;
-        renderBookingCalendar();
-        updateBookingDateSummary();
-    }
-
-    function selectBookingTime(timeString) {
-        const morning = document.getElementById('slot-morning');
-        const afternoon = document.getElementById('slot-afternoon');
-        const evening = document.getElementById('slot-evening');
-        
-        [morning, afternoon, evening].forEach(slot => {
-            if (slot) slot.className = "px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900";
-        });
-
-        if (timeString.includes('Morning')) {
-            morning.className = "px-3 py-2 text-xs font-bold rounded bg-brickred-accent text-white border-brickred-accent shadow-inner";
-        } else if (timeString.includes('Afternoon')) {
-            afternoon.className = "px-3 py-2 text-xs font-bold rounded bg-brickred-accent text-white border-brickred-accent shadow-inner";
-        } else if (timeString.includes('Evening')) {
-            evening.className = "px-3 py-2 text-xs font-bold rounded bg-brickred-accent text-white border-brickred-accent shadow-inner";
-        }
-
-        activeTime = timeString;
-        document.getElementById('summary-time').innerText = timeString;
-    }
-
-    function submitBooking() {
-        const phoneInput = document.getElementById('booking-phone');
-        const summaryText = document.getElementById('summary-time');
-        
-        if (!activeTime) {
-            summaryText.className = "font-bold text-red-600 text-xs";
-            summaryText.innerText = "Please select Callback Slot";
-            setTimeout(() => {
-                summaryText.className = "font-bold text-charcoal-900";
-                summaryText.innerText = "None Selected";
-            }, 1200);
-            return;
-        }
-
-        if (!phoneInput || !phoneInput.value.trim()) {
-            phoneInput.classList.add('border-red-500');
-            return;
-        }
-        phoneInput.classList.remove('border-red-500');
-
-        document.getElementById('success-date-str').innerText = `July ${activeDay}, 2026`;
-        document.getElementById('success-time-str').innerText = activeTime;
-
-        document.getElementById('booking-form-container').classList.add('hidden');
-        document.getElementById('booking-success').classList.remove('hidden');
-    }
-
-    function resetBooking() {
-        document.getElementById('booking-phone').value = '';
-        activeTime = '';
-        document.getElementById('summary-time').innerText = "None Selected";
-        
-        const morning = document.getElementById('slot-morning');
-        const afternoon = document.getElementById('slot-afternoon');
-        const evening = document.getElementById('slot-evening');
-        [morning, afternoon, evening].forEach(slot => {
-            if (slot) slot.className = "px-3 py-2 text-xs font-bold rounded border border-stonebeige-300 bg-white hover:border-brickred-accent text-charcoal-900";
-        });
-
-        document.getElementById('booking-success').classList.add('hidden');
-        document.getElementById('booking-form-container').classList.remove('hidden');
-    }
-
-    document.addEventListener('DOMContentLoaded', initializeBookingCalendar);
-
-    // FAQ Accordion Toggle Utility
+    // FAQ Accordion Toggle Utility    // FAQ Accordion Toggle Utility
     function toggleFaq(num) {
         const content = document.getElementById(`faq-content-${num}`);
         const icon = document.getElementById(`faq-icon-${num}`);
         const isClosed = content.classList.contains('hidden');
 
         // close all
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i <= 12; i++) {
             const otherContent = document.getElementById(`faq-content-${i}`);
             const otherIcon = document.getElementById(`faq-icon-${i}`);
             if (otherContent) otherContent.classList.add('hidden');
